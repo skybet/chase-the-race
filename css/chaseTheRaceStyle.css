@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+}
+/*Nav*/
+#navHeader {
+  outline: none;
+  width: 100%;
+  height: auto;
+  color: #fff;
+  background: linear-gradient(90deg, #000000 5%, #2C666E);
+  position: static;
+}
+
+#logoDiv img {
+  height: 90px;
+  width: auto;
+}
