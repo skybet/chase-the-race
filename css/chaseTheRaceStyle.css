@@ -37,3 +37,11 @@ body {
   background-color: #D63E80;
   color: #E0DEDA;
 }
+
+select {
+  font-size: 14px;
+}
+
+input {
+  font-size: 14px;
+}
