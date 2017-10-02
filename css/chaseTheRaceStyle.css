@@ -2,6 +2,7 @@ body {
   margin: 0;
   background: #367778;
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  color: #E0DEDA;
 }
 /*Nav*/
 #navHeader {
@@ -11,6 +12,7 @@ body {
   color: #fff;
   background: linear-gradient(90deg, #000000 5%, #2C666E);
   position: static;
+  border-bottom: 4px solid #D63E80;
 }
 
 #logoDiv img {
@@ -31,4 +33,7 @@ body {
   width: 100px;
   height: 40px;
   border: none;
+  font-size: 16px;
+  background-color: #D63E80;
+  color: #E0DEDA;
 }
