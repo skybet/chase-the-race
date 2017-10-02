@@ -10,7 +10,7 @@ class PredictionManager {
       return $this->update($pred);
     }
     $stmt = $this->db->prepare("
-        insert into Prediction (email, teamID)
+        insert into Prediction (user, teamID)
         values(:name, :teamID)
     ");
 
@@ -18,6 +18,7 @@ class PredictionManager {
         'name'  => $bp->name,
         'teamID' => $bp->teamID,
     ]);
-    $bp->id = $this->db->lastInsertId();  }
+    $bp->id = $this->db->lastInsertId();
+  }
 }
 ?>
