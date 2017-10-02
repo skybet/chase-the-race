@@ -1,6 +1,7 @@
 body {
   margin: 0;
   background: #367778;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
 /*Nav*/
 #navHeader {
@@ -23,5 +24,11 @@ body {
 }
 
 .pageTitle {
+  text-align: center;
+}
 
+.submitButton {
+  width: 100px;
+  height: 40px;
+  border: none;
 }

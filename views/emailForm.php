@@ -32,8 +32,8 @@
           <br>
           Tiebreaker - How many pit stops will be made?
           <input name="tiebreaker" type="number" min="0" step="1">
-
-          <input type="submit" name="submit" value="submit">
+          <br/><br/>
+          <input class="submitButton" type="submit" name="submit" value="Enter">
         </form>
 
         <p id=result></p>
