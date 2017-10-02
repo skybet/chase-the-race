@@ -7,12 +7,10 @@
   </head>
   <body>
     <h1>Chase the Race</h1>
-    <form class="emailForm" action="" method="post" onsubmit="validate()">
+    <form class="emailForm" action="" method="post">
       <p>Please enter your email address:</p>
-      <input id=email type="text" name="email">
-      <input type="submit" name="submit" value="submit"><!-- Enter the competition</button> -->
+      <input type="email" name="email">
+      <input type="submit" name="submit" value="submit">
     </form>
-    <p id=result></p>
-    <script type="scripts/emailValidation.js"></script>
   </body>
 </html>
