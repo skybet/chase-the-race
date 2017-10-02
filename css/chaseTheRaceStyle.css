@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background: #367778;
 }
 /*Nav*/
 #navHeader {
@@ -14,4 +15,13 @@ body {
 #logoDiv img {
   height: 90px;
   width: auto;
+}
+
+.container {
+  margin-left: 7%;
+  margin-right: 7%;
+}
+
+.pageTitle {
+
 }
