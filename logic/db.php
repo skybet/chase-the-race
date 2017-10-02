@@ -6,7 +6,7 @@ function getDB(){
   }
 
   $host = '127.0.0.1';
-  $db   = 'chasetherace';
+  $db   = 'ChaseTheRace';
   $user = 'adminUser';
   $pass = 'The password';
 
