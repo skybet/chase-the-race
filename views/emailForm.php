@@ -5,6 +5,7 @@
     <title>Chase the Race</title>
     <link rel="stylesheet" type="text/css" href="../css/chaseTheRaceStyle.css"/>
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   </head>
   <body>
     <?php
