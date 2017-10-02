@@ -7,12 +7,12 @@ function getDB(){
 
   $host = '127.0.0.1';
   $db   = 'chase the race';
-  // $user = 'user';
-  // $pass = 'password';
-  //
-  // $dsn = "mysql:host=$host;dbname=$db";
-  // $pdo = new PDO($dsn, $user, $pass);
-  //
-  // return $pdo;
+  $user = 'adminUser';
+  $pass = 'The password';
+
+  $dsn = "mysql:host=$host;dbname=$db";
+  $pdo = new PDO($dsn, $user, $pass);
+
+  return $pdo;
 }
 ?>

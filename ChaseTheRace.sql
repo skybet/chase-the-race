@@ -1,3 +1,8 @@
+create database if not exists chaseTheRace;
+use chaseTheRace;
+create user if not exists 'adminUser'@'localhost' identified by 'The password';
+grant all on chaseTheRace.* to 'adminUser'@'localhost';
+
 DROP TABLE IF EXISTS User;
 create table Users (
   id int not null auto_increment primary key,

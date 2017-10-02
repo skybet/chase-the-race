@@ -10,13 +10,13 @@ class PredictionManager {
       return $this->update($pred);
     }
     $stmt = $this->db->prepare("
-        insert into Prediction (user, teamID)
-        values(:name, :teamID)
+        insert into Prediction (user_id, prediction)
+        values(:uid, :pred)
     ");
 
     $r = $stmt->execute([
-        'name'  => $bp->name,
-        'teamID' => $bp->teamID,
+        'uid'  => $pred->user_id,
+        'pred' => $pred->prediction,
     ]);
     $bp->id = $this->db->lastInsertId();
   }
