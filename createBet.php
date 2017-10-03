@@ -13,10 +13,9 @@ $usermanager->insertUser($_POST['email']);
 
 $user = $usermanager->byEmail($_POST['email']);
 
-
 $predictionmanager = new PredictionManager(getDB());
-var_dump($user->id);
+//var_dump($user->id);
 
-$predictionmanager->save($user->id, $_POST['prediction'], $_POST['tiebreaker']);
-
+$predictionmanager->save($user->id, $_POST);
+header('Location: confirmation.php');
 ?>
