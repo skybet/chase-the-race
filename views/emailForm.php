@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../css/chaseTheRaceStyle.css"/>
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="../scripts/emailValidation.js"></script>
+    <script src="../scripts/formValidation.js"></script>
   </head>
 
   <body>
@@ -52,7 +52,7 @@
           Tiebreaker - How many pit stops will be made?
           <input name="tiebreaker" type="number" min="0" step="1"  required >
           <br/><br/>
-          <input class="submitButton" type="submit" name="submit" value="Enter">
+          <input class="submitButton" type="submit" name="submit" value="Enter" onClick="return checkNotNull()">
         </form>
 
 
