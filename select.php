@@ -1,7 +1,7 @@
 <?php
 include 'logic/db.php';
 
-    $query = "Select * from Users";
-    echo $query;
+$result = mysql_query('SELECT * FROM Users');
 
+echo $result;
 ?>
