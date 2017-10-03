@@ -14,5 +14,8 @@ create table Predictions (
   id int not null auto_increment primary key,
   user_id int not null,
   prediction int not null,
+  fastest_pit_stop int not null,
+  first_retiree int not null,
+  safety_car boolean DEFAULT FALSE,
   tiebreaker int not null
 );
