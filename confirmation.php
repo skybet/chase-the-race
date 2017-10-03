@@ -9,7 +9,7 @@
 </head>
 <body>
   <?php
-              include_once('includes/navBar.inc.php');
+              include_once('Includes/navBar.inc.php');
   ?>
 <div class="container">
   <p>You have placed your bet, good luck!</p>
