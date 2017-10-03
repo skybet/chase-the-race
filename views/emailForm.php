@@ -24,10 +24,27 @@
 
           Choose a race winner!
           <select name="prediction" id="">
-                  <option value="1">Hamilton </option>
-                  <option value="2">Vettel</option>
-                  <option value="3">Bottas</option>
-                  <option value="4">Ricciardo</option>
+                  <option value="1">Lewis Hamilton </option>
+                  <option value="2">Sebastian Vettel</option>
+                  <option value="3">Max Verstappen</option>
+                  <option value="4">Daniel Ricciardo</option>
+                  <option value="5">Kimi Rakikkonen</option>
+                  <option value="6">Valtteri Bottas</option>
+                  <option value="7">Sergio Perez</option>
+                  <option value="8">Esteban Ocon</option>
+                  <option value="9">Fernando Alonso</option>
+                  <option value="10">Nico Hulkenburg</option>
+                  <option value="11">Stoffel Vandoorne</option>
+                  <option value="12">Carlos Sainz</option>
+                  <option value="13">Felope Massa</option>
+                  <option value="14">Jolyon Palmer</option>
+                  <option value="15">Lance Stroll</option>
+                  <option value="15">Pierre Gastly</option>
+                  <option value="16">Romain Grosjean</option>
+                  <option value="17">Kevin Magnussen</option>
+                  <option value="18">Marcus Ericsson</option>
+                  <option value="19">Pascal Wehrlein</option>
+
           </select>
           <br>
           Tiebreaker - How many pit stops will be made?
