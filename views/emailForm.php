@@ -95,7 +95,7 @@
           <input name="tiebreaker" id="tiebreaker" type="number" min="0" step="1"  required >
           <br/><br/>
 
-          <input class="submitButton" type="submit" name="submit" value="Enter" onClick="return checkNotNull()">
+          <input class="submitButton" type="submit" name="submit" value="Enter" onClick="return checkForm()">
         </form>
         <p id=result></p>
   </div>
