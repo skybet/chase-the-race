@@ -13,7 +13,6 @@
 
     <?php
                 include_once(__DIR__.'/../Includes/navBar.inc.php');
-                include_once(__DIR__.'/../Includes/footer.inc.php');
     ?>
     <div class="container">
       <h1 class="pageTitle">Chase the Race</h1>
@@ -57,6 +56,7 @@
 
         <p id=result></p>
   </div>
+  <?php include_once(__DIR__.'/../Includes/footer.inc.php'); ?>
   <script type="scripts/placeBet.js"></script>
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
