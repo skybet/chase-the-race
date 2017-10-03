@@ -25,7 +25,7 @@
 
           Choose a race winner!
           <select name="prediction" id="">
-                  <option value="1">Lewis Hamilton </option>
+                  <option value="1">Blueis Hamilton </option>
                   <option value="2">Sebastian Vettel</option>
                   <option value="3">Max Verstappen</option>
                   <option value="4">Daniel Ricciardo</option>
