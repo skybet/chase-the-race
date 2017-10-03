@@ -1,15 +1,15 @@
 <?php
-class Prediction {
+class User {
   private $db;
-  public $uid;
+  private $id;
 
   public function __construct(PDO $db = null){
     $this->db = $db;
   }
 
   public function fromArray(array $a){
-    $this->uid = $a["id"];
-    $this->prediction = $a["prediction"];
+    $this->email = $a["email"];
   }
 }
+
 ?>
