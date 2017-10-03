@@ -1,7 +1,5 @@
 CREATE DATABASE IF NOT EXISTS ChaseTheRace;
-
 use ChaseTheRace;
-
 create user if not exists 'adminUser'@'localhost' identified by 'The password';
 grant all on ChaseTheRace.* to 'adminUser'@'localhost';
 
