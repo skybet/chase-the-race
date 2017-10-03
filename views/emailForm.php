@@ -12,7 +12,7 @@
   <body>
 
     <?php
-                include_once(__DIR__.'/../includes/navBar.inc.php');
+                include_once($_SERVER['DOCUMENT_ROOT'].'/includes/navBar.inc.php');
     ?>
     <div class="container">
       <h1 class="pageTitle">Chase the Race</h1>
@@ -21,7 +21,7 @@
         <input type="email" name="email" required>
 
         <h2>Place Your Bets!</h2>
-      
+
           Choose a race winner!
           <select name="prediction" id="">
                   <option value="1">Lewis Hamilton </option>
