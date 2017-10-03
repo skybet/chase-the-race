@@ -44,11 +44,8 @@
             <option value="17">Kevin Magnussen</option>
             <option value="18">Marcus Ericsson</option>
             <option value="19">Pascal Wehrlein</option>
-
           </select>
           <br>
-          Tiebreaker - How many pit stops will be made?
-          <input name="tiebreaker" id="tiebreaker" type="number" min="0" step="1" required>
 
           Choose the team with the fastest Pit Stop time!
           <select name="fastestPitStop" id="fastestPitStop">
@@ -64,7 +61,8 @@
             <option value="10">Williams</option>
           </select>
           <br>
-          Choose a race winner!
+          
+          Who will retire first?
           <select name="retiree" id="retiree">
             <option value="1">Lewis Hamilton</option>
             <option value="2">Sebastian Vettel</option>
@@ -88,14 +86,15 @@
             <option value="19">Pascal Wehrlein</option>
           </select>
           <br>
+
           Will a safety car be used?
           <input type="checkbox" name="safetyCar">
           <br>
 
           Tiebreaker - How many total pit stops will be made?
-
-          <input name="tiebreaker" type="number" min="0" step="1"  required >
+          <input name="tiebreaker" id="tiebreaker" type="number" min="0" step="1"  required >
           <br/><br/>
+
           <input class="submitButton" type="submit" name="submit" value="Enter" onClick="return checkNotNull()">
         </form>
         <p id=result></p>
