@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../css/chaseTheRaceStyle.css"/>
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="../scripts/emailValidation.js"></script>
   </head>
 
   <body>
@@ -60,5 +61,4 @@
   <script type="scripts/placeBet.js"></script>
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="scripts/emailValidation.js"></script>
 </html>
