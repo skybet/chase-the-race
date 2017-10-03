@@ -7,22 +7,21 @@
     <link rel="stylesheet" type="text/css" href="../css/chaseTheRaceStyle.css"/>
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="../scripts/formValidation.js"></script>
   </head>
 
   <body>
 
     <?php
-    include($_SERVER['DOCUMENT_ROOT'].'/Includes/navBar.inc.php');
+                include_once($_SERVER['DOCUMENT_ROOT'].'/includes/navBar.inc.php');
     ?>
-
     <div class="container">
       <h1 class="pageTitle">Chase the Race</h1>
       <form class="predictionForm" action="../confirmation.php" method="post">
         <p>Please enter your email address:</p>
-        <input type="email" name="email" required>
+        <input type="email" id="email" name="email" required>
 
-        <h2>Place Your Bets! - <a href="https://www.formula1.com/en/championship/races/2017/Japan.html">Japan Grand Prix | Sunday 8th October </a></h2>
-
+        <h2>Place Your Bets!</h2>
 
           Choose a race winner!
           <select name="prediction" id="">
@@ -50,9 +49,9 @@
           </select>
           <br>
           Tiebreaker - How many pit stops will be made?
-          <input name="tiebreaker" type="number" min="0" step="1"  required >
+          <input name="tiebreaker" id="tiebreaker" type="number" min="0" step="1" required>
           <br/><br/>
-          <input class="submitButton" type="submit" name="submit" value="Enter">
+          <input class="submitButton" type="submit" name="submit" value="Enter" onClick="return checkNotNull()" />
         </form>
 
         <p id=result></p>
@@ -60,5 +59,4 @@
   <script type="scripts/placeBet.js"></script>
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="scripts/emailValidation.js"></script>
 </html>
