@@ -13,7 +13,7 @@
   <body>
 
     <?php
-                include_once($_SERVER['DOCUMENT_ROOT'].'/includes/navBar.inc.php');
+                include_once($_SERVER['DOCUMENT_ROOT'].'/Includes/navBar.inc.php');
     ?>
     <div class="container">
       <h1 class="pageTitle">Chase the Race</h1>
