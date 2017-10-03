@@ -12,8 +12,8 @@
   <body>
 
     <?php
-                include_once(__DIR__.'/../includes/navBar.inc.php');
-                include_once(__DIR__.'/../includes/footer.inc.php');
+                include_once(__DIR__.'/../Includes/navBar.inc.php');
+                include_once(__DIR__.'/../Includes/footer.inc.php');
     ?>
     <div class="container">
       <h1 class="pageTitle">Chase the Race</h1>
@@ -53,8 +53,7 @@
           <br/><br/>
           <input class="submitButton" type="submit" name="submit" value="Enter">
         </form>
-        <br/>
-        <br/>
+
 
         <p id=result></p>
   </div>
