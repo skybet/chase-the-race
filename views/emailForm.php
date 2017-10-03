@@ -20,8 +20,14 @@
         <p>Please enter your email address:</p>
         <input type="email" name="email" required>
 
+<<<<<<< HEAD
         <h2>Place Your Bets!</h2>
 
+=======
+        <h2>Place Your Bets! - <a href="https://www.formula1.com/en/championship/races/2017/Japan.html">Japan Grand Prix | Sunday 8th October </a></h2>
+        
+      
+>>>>>>> Link to event on main page
           Choose a race winner!
           <select name="prediction" id="">
                   <option value="1">Lewis Hamilton </option>
