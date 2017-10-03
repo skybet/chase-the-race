@@ -18,7 +18,7 @@
       <h1 class="pageTitle">Chase the Race</h1>
       <form class="predictionForm" action="../createBet.php" method="post">
         <p>Please enter your email address:</p>
-        <input type="email" name="email">
+        <input type="email" name="email" required>
 
         <h2>Place Your Bets!</h2>
       
@@ -48,7 +48,7 @@
           </select>
           <br>
           Tiebreaker - How many pit stops will be made?
-          <input name="tiebreaker" type="number" min="0" step="1">
+          <input name="tiebreaker" type="number" min="0" step="1"   >
           <br/><br/>
           <input class="submitButton" type="submit" name="submit" value="Enter">
         </form>
