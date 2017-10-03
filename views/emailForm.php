@@ -12,15 +12,17 @@
   <body>
 
     <?php
-                include($_SERVER['DOCUMENT_ROOT'].'/Includes/navBar.inc.php');
+    include($_SERVER['DOCUMENT_ROOT'].'/Includes/navBar.inc.php');
     ?>
+
     <div class="container">
       <h1 class="pageTitle">Chase the Race</h1>
       <form class="predictionForm" action="../confirmation.php" method="post">
         <p>Please enter your email address:</p>
         <input type="email" name="email" required>
 
-        <h2>Place Your Bets!</h2>
+        <h2>Place Your Bets! - <a href="https://www.formula1.com/en/championship/races/2017/Japan.html">Japan Grand Prix | Sunday 8th October </a></h2>
+
 
           Choose a race winner!
           <select name="prediction" id="">
