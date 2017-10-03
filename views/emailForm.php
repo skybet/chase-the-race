@@ -16,7 +16,7 @@
     ?>
     <div class="container">
       <h1 class="pageTitle">Chase the Race</h1>
-      <form class="predictionForm" action="../createBet.php" method="post">
+      <form class="predictionForm" action="../confirmation.php" method="post">
         <p>Please enter your email address:</p>
         <input type="email" name="email">
 
