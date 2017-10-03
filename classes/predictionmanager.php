@@ -5,20 +5,18 @@ class PredictionManager {
     $this->db = $db;
   }
 
-  public function save(Prediction $pred){
-    if (isset($pred->id)){
-      return $this->update($pred);
-    }
+  public function save($uid, $pred, $tie){
     $stmt = $this->db->prepare("
-      insert into Predictions (user_id, prediction)
-      values(:uid, :pred)
+      insert into Predictions (user_id, prediction, tiebreaker)
+      values (:uid, :pred, :tie)
     ");
-
+    //echo $pred;
     $r = $stmt->execute([
-        'uid'  => $pred->user_id,
-        'pred' => $pred->prediction
+        'uid'  => $uid,
+        'pred' => $pred,
+        'tie' => $tie
     ]);
-    $pred->id = $this->db->lastInsertId();
+    //var_dump($r);
   }
 }
 ?>

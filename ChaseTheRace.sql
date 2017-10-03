@@ -13,6 +13,6 @@ DROP TABLE IF EXISTS Predictions;
 create table Predictions (
   id int not null auto_increment primary key,
   user_id int not null,
-  prediction varchar(256) not null,
-  pitstops int not null
+  prediction int not null,
+  tiebreaker int not null
 );

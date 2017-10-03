@@ -2,21 +2,38 @@
 class UserManager {
   private $db;
 
-  public function __construct(PDO $db = null){
+  public function __construct(PDO $db = null) {
     $this->db = $db;
   }
 
-  public function insertUser($email){
+  public function insertUser($email) {
     $stmt = $this->db->prepare("
-    insert into Users (email)
-    values (:email)
-    ");
+      insert into Users (email)
+      values (:email)");
 
     $r = $stmt->execute([
-        'email' => $email
+      'email' => $email
     ]);
   }
+  public function byEmail($email) {
+    $r = $this->db->prepare(
+      "select id, email
+      from Users
+      where email = :email");
+    $r->execute(['email' => $email]);
 
+    $users = [];
+
+    // var_dump($obj);
+    foreach ($r as $row){
+      var_dump($row);
+      $user = new User();
+      $user->fromArray($row);
+      $users[] = array_push($users, $user);
+    }
+    echo $users[0]->id;
+    return $users[0];
+  }
 }
 
 ?>
