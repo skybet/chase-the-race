@@ -20,7 +20,7 @@
       <h1 class="pageTitle">Chase the Race</h1>
       <form class="predictionForm" action="../confirmation.php" method="post">
         <p>Please enter your email address:</p>
-        <input type="email" name="email" required>
+        <input type="email" id="email" name="email" required>
 
         <h2>Place Your Bets!</h2>
 
@@ -50,7 +50,7 @@
           </select>
           <br>
           Tiebreaker - How many pit stops will be made?
-          <input name="tiebreaker" type="number" min="0" step="1"  required >
+          <input name="tiebreaker" id="tiebreaker" type="number" min="0" step="1"  required >
           <br/><br/>
           <input class="submitButton" type="submit" name="submit" value="Enter" onClick="return checkNotNull()">
         </form>
