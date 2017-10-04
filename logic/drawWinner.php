@@ -12,7 +12,7 @@ function drawWinner(){
         echo "One winner... <br>";
         echo "The winner is: ".$list[0]['email']."<br>";
     } else {
-        echo "A tiebreak has been called. The winner is... <br>";
+        echo "A tiebreak has been called.<br>";
         $winner = tieBreak($list);
         if (count($winner) < 2){
             echo "The winner is: ".$winner[0]['email']."<br>";
@@ -34,7 +34,6 @@ function tieBreak($list){
         } else {
             $currentTie = $finalWinner[0]['tiebreaker'];
             $newTie = $row['tiebreaker'];
-            var_dump($newTie);
             if ((abs($newTie - $pitStopCount)) == abs($currentTie - $pitStopCount)){
                 array_push($finalWinner, $row);
             } elseif (abs($newTie - $pitStopCount) < abs($currentTie - $pitStopCount)){
