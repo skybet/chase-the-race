@@ -40,8 +40,6 @@ $predictionmanager = new PredictionManager(getDB());
 //var_dump($user->id);
 
 $predictionmanager->save($user->id, $_POST);
-
-<?php
 // If you are using Composer (recommended)
 // require 'vendor/autoload.php';
 
