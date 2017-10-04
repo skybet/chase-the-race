@@ -7,7 +7,7 @@ require 'vendor/autoload.php';
 // require("path/to/sendgrid-php/sendgrid-php.php");
 $from = new SendGrid\Email("Example User", "test@example.com");
 $subject = "Sending with SendGrid is Fun";
-$to = new SendGrid\Email("Example User", "test@example.com");
+$to = new SendGrid\Email("Example User", "nathanpreen@gmail.com");
 $content = new SendGrid\Content("text/plain", "and easy to do anywhere, even with PHP");
 $mail = new SendGrid\Mail($from, $subject, $to, $content);
 $apiKey = getenv('SENDGRID_API_KEY');
