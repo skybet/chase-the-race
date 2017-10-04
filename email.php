@@ -1,4 +1,9 @@
 <?php
+
+
+
+
+
 // using SendGrid's PHP Library
 // https://github.com/sendgrid/sendgrid-php
 // If you are using Composer (recommended)
@@ -16,3 +21,4 @@ $response = $sg->client->mail()->send()->post($mail);
 echo $response->statusCode();
 print_r($response->headers());
 echo $response->body();
+?>
