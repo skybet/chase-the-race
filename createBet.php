@@ -4,7 +4,7 @@ include 'classes/predictionmanager.php';
 include 'classes/user.php';
 include 'classes/prediction.php';
 include 'logic/db.php';
-require 'vendor/autoload.php';
+require("sendgrid-php/sendgrid-php.php");
 
 //print_r($_POST); //test for POST
 
