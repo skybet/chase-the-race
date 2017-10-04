@@ -26,12 +26,12 @@ class UserManager {
 
     // var_dump($obj);
     foreach ($r as $row){
-      var_dump($row);
+      //var_dump($row);
       $user = new User();
       $user->fromArray($row);
       $users[] = array_push($users, $user);
     }
-    echo $users[0]->id;
+    //echo $users[0]->id;
     return $users[0];
   }
 

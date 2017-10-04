@@ -4,10 +4,16 @@ function getDB(){
   if (isset($pdo)){
       return $pdo;
   }
+
   $host = 'us-cdbr-iron-east-05.cleardb.net';
-  $db   = 'heroku_42070fbe6866ca9';
-  $user = 'b1f075b4451a27';
-  $pass = 'a837a4fc';
+  $db   = 'heroku_2a00e25f9fd5fde';
+  $user = 'b853c9a50b3dae';
+  $pass = '850596d0';
+
+  // $host = '127.0.0.1';
+  // $db   = 'ChaseTheRace';
+  // $user = 'adminUser';
+  // $pass = 'The password';
 
   $dsn = "mysql:host=$host;dbname=$db";
   $pdo = new PDO($dsn, $user, $pass);

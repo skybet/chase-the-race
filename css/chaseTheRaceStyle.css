@@ -46,7 +46,19 @@ input {
   font-size: 14px;
 }
 
+@media(max-width: 900px){
+
+  #footerbottom {
+    position: relative !important;
+    display: block;
+    padding: 1rem;
+    font-size: 7px;
+  }
+
+}
+
 #footerbottom {
+<<<<<<< HEAD
 position: absolute;
 width:100%;
 	height:100px;
@@ -55,4 +67,12 @@ bottom: 0;
 left: 0;
 padding: 1rem;
 font-size: 7px;
+=======
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  font-size: 7px;
+>>>>>>> 0aad61164f62537d956eaa722b65d2cfc28b6955
 }
