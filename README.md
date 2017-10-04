@@ -1,4 +1,4 @@
-Chase the Race
+Chase the Race sucks
 ==============
 
 A graduate training project.
