@@ -41,27 +41,42 @@ $predictionmanager = new PredictionManager(getDB());
 
 $predictionmanager->save($user->id, $_POST);
 
-//Composer's autoload file loads all necessary files
+<?php
+// If you are using Composer (recommended)
 // require 'vendor/autoload.php';
 
-// If you are using Composer
+// If you are not using Composer
+require("sendgrid-php/sendgrid-php.php");
 
-// If you are not using Composer (recommended)
-// require("path/to/sendgrid-php/sendgrid-php.php");
-
-$from = new SendGrid\Email(null, "test@example.com");
-$subject = "Hello World from the SendGrid PHP Library!";
-$to = new SendGrid\Email(null, "nathanpreen@gmail.com");
-$content = new SendGrid\Content("text/plain", "Hello, Email!");
-$mail = new SendGrid\Mail($from, $subject, $to, $content);
+$request_body = json_decode('{
+  "personalizations": [
+    {
+      "to": [
+        {
+          "email": "nathanpreen@gmail.com"
+        }
+      ],
+      "subject": "Sending with SendGrid is Fun"
+    }
+  ],
+  "from": {
+    "email": "test@example.com"
+  },
+  "content": [
+    {
+      "type": "text/plain",
+      "value": "and easy to do anywhere, even with PHP"
+    }
+  ]
+}');
 
 $apiKey = getenv('SENDGRID_API_KEY');
 $sg = new \SendGrid($apiKey);
 
-$response = $sg->client->mail()->send()->post($mail);
+$response = $sg->client->mail()->send()->post($request_body);
 echo $response->statusCode();
-echo $response->headers();
 echo $response->body();
+print_r($response->headers());
 
 
 // $mail = new PHPMailer;
