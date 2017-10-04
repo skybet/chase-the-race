@@ -4,6 +4,7 @@ include 'classes/predictionmanager.php';
 include 'classes/user.php';
 include 'classes/prediction.php';
 include 'logic/db.php';
+require 'vendor/autoload.php';
 
 //print_r($_POST); //test for POST
 
@@ -22,7 +23,6 @@ $predictionmanager->save($user->id, $_POST);
 // require 'vendor/autoload.php';
 
 // If you are using Composer
-require 'vendor/autoload.php';
 
 // If you are not using Composer (recommended)
 // require("path/to/sendgrid-php/sendgrid-php.php");
