@@ -9,6 +9,10 @@ include 'logic/db.php';
 
 //echo $_POST['email'];
 $usermanager = new UserManager(getDB());
+$exists = $usermanager->doesEmailExist($_POST['email']);
+
+if (!$exists) {
+
 $usermanager->insertUser($_POST['email']);
 
 $user = $usermanager->byEmail($_POST['email']);
@@ -18,4 +22,6 @@ $predictionmanager = new PredictionManager(getDB());
 
 $predictionmanager->save($user->id, $_POST);
 header('Location: confirmation.php');
+}
+else header('Location: error.php');
 ?>
