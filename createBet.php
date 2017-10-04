@@ -43,7 +43,7 @@ $predictionmanager->save($user->id, $_POST);
 // require 'vendor/autoload.php';
 
 // If you are not using Composer
-require 'sendgrid-php/sendgrid-php.php';
+require ("./sendgrid-php/sendgrid-php.php");
 
 $request_body = json_decode('{
   "personalizations": [
