@@ -23,11 +23,7 @@
 
   <body>
     <?php
-      include_once($_SERVER['DOCUMENT_ROOT'].'/Includes/navBar.inc.php');
       include_once(__DIR__.'/../Includes/navBar.inc.php');
-      include_once(__DIR__.'/../Includes/footer.inc.php');
-
-      
     ?>
     <div class="container">
       <h1 class="pageTitle">Chase the Race</h1>
@@ -75,7 +71,7 @@
             <option value="10">Williams</option>
           </select>
           <br>
-          
+
           Who will retire first?
           <select name="retiree" id="retiree">
             <option value="1">Lewis Hamilton</option>
@@ -114,6 +110,7 @@
         <p id=result></p>
   </div>
   <script type="scripts/placeBet.js"></script>
+  <?php include_once(__DIR__.'/../Includes/footer.inc.php'); ?>
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </html>
