@@ -52,9 +52,9 @@ require 'vendor/autoload.php';
 // If you are not using Composer
 // require(__DIR__."/vendor/sendgrid/sendgrid/sendgrid-php.php");
 $from = new SendGrid\Email("Example User", "test@example.com");
-$subject = "Sending with SendGrid is Fun";
+$subject = "Your entry has been recorded!";
 $to = new SendGrid\Email("Example User", $_POST['email']);
-$content = new SendGrid\Content("text/plain", "and easy to do anywhere, even with PHP");
+$content = new SendGrid\Content("text/plain", "Dear $_POST['email'], your entry has been recorded into the draw!");
 $mail = new SendGrid\Mail($from, $subject, $to, $content);
 $apiKey = getenv('SENDGRID_API_KEY');
 $sg = new \SendGrid($apiKey);
