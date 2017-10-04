@@ -27,55 +27,6 @@ function get_client_ip_server() {
 
 $ipAddress = get_client_ip_server();
 
-//print_r($_POST); //test for POST
-
-//echo $_POST['email'];
-$usermanager = new UserManager(getDB());
-$usermanager->insertUser($_POST['email']);
-
-$user = $usermanager->byEmail($_POST['email']);
-
-$predictionmanager = new PredictionManager(getDB());
-//var_dump($user->id);
-
-$predictionmanager->save($user->id, $_POST);
-// If you are using Composer (recommended)
-// require 'vendor/autoload.php';
-
-// If you are not using Composer
-require ("./sendgrid-php/sendgrid-php.php");
-
-$request_body = json_decode('{
-  "personalizations": [
-    {
-      "to": [
-        {
-          "email": "nathanpreen@gmail.com"
-        }
-      ],
-      "subject": "Sending with SendGrid is Fun"
-    }
-  ],
-  "from": {
-    "email": "test@example.com"
-  },
-  "content": [
-    {
-      "type": "text/plain",
-      "value": "and easy to do anywhere, even with PHP"
-    }
-  ]
-}');
-
-$apiKey = getenv('SENDGRID_API_KEY');
-$sg = new \SendGrid($apiKey);
-
-$response = $sg->client->mail()->send()->post($request_body);
-echo $response->statusCode();
-echo $response->body();
-print_r($response->headers());
-
-
 // $mail = new PHPMailer;
 
 // $mail->isSMTP();  // Set mailer to use SMTP
