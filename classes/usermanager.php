@@ -34,6 +34,7 @@ class UserManager {
     //echo $users[0]->id;
     return $users[0];
   }
+
 }
 
 ?>
