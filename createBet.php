@@ -19,7 +19,7 @@ $predictionmanager = new PredictionManager(getDB());
 $predictionmanager->save($user->id, $_POST);
 
 //Composer's autoload file loads all necessary files
-require '/vendor/autoload.php';
+require 'vendor/autoload.php';
 
 $mail = new PHPMailer;
 
