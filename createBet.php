@@ -4,7 +4,6 @@ include 'classes/predictionmanager.php';
 include 'classes/user.php';
 include 'classes/prediction.php';
 include 'logic/db.php';
-require ("sendgrid-php/sendgrid-php.php");
 
 function get_client_ip_server() {
   $ipaddress = '';
@@ -44,7 +43,7 @@ $predictionmanager->save($user->id, $_POST);
 // require 'vendor/autoload.php';
 
 // If you are not using Composer
-require("sendgrid-php/sendgrid-php.php");
+require 'sendgrid-php/sendgrid-php.php';
 
 $request_body = json_decode('{
   "personalizations": [
