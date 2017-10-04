@@ -11,7 +11,10 @@ grant all on heroku_2a00e25f9fd5fde.* to '853c9a50b3dae'@'us-cdbr-iron-east-05.c
 DROP TABLE IF EXISTS Users;
 create table Users (
   id int not null auto_increment primary key,
-  email varchar(250) not null
+  email varchar(250) not null,
+  domain varchar(50) not null,
+  date_created datetime not null,
+  ip varchar(20) not null
 );
 
 DROP TABLE IF EXISTS Predictions;
