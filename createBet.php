@@ -25,7 +25,26 @@ function get_client_ip_server() {
   return $ipaddress;
 }
 
+$explode = explode("@",$_POST['email']);
+
+date_default_timezone_set('Europe/London');
+
 $ipAddress = get_client_ip_server();
+$domain = $explode[1];
+$dateAndTime = date('Y-m-d H:i:s');
+
+
+//echo $_POST['email'];
+$usermanager = new UserManager(getDB());
+$usermanager->insertUser($_POST['email'], $ipAddress, $domain, $dateAndTime);
+
+$user = $usermanager->byEmail($_POST['email']);
+
+$predictionmanager = new PredictionManager(getDB());
+//var_dump($user->id);
+
+$predictionmanager->save($user->id, $_POST);
+
 
 // $mail = new PHPMailer;
 
