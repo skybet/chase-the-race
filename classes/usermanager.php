@@ -17,7 +17,7 @@ class UserManager {
   }
   public function byEmail($email) {
     $r = $this->db->prepare(
-      "select id, email
+      "select id, email, domain, date_created, ip
       from Users
       where email = :email");
     $r->execute(['email' => $email]);
