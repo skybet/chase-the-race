@@ -4,7 +4,7 @@ include 'classes/predictionmanager.php';
 include 'classes/user.php';
 include 'classes/prediction.php';
 include 'logic/db.php';
-require("sendgrid-php/sendgrid-php.php");
+require ("sendgrid-php/sendgrid-php.php");
 
 function get_client_ip_server() {
   $ipaddress = '';
