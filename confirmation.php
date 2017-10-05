@@ -1,3 +1,4 @@
+<?php include 'logic/sessions.php'; ?>
 <html>
 
   <head>
