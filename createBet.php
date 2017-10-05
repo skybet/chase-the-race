@@ -33,5 +33,5 @@ print_r($response->headers());
 echo $response->body();
 
 header('Location: confirmation.php');
-}
+}else ('')
 ?>
