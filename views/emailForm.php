@@ -1,7 +1,8 @@
 <?php
     if(isset($_GET['failed'])){
     echo "We have received your email, our agent will contact you shortly";
-    ?>
+    }
+?>
 <html>
   <head>
     <meta charset="utf-8">
