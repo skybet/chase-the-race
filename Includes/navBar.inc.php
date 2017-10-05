@@ -1,6 +1,7 @@
 <div id="navHeader">
   <div class="container">
     <div style="display: inline-block;"  id="logoDiv">
+    <a href=https://chase-the-race.herokuapp.com>
       <img src="/Images/logo.png" alt="logo">
     </div>
     <?php if(isset($_SESSION['login'])){ ?>
