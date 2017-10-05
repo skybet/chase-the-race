@@ -108,6 +108,11 @@
         </form>
         <p id=result></p>
   </div>
+  <?php
+    if(isset($_GET['notLoggedIn'])){
+    echo "You must be logged in to place a predication";
+    }
+?>
   <script type="scripts/placeBet.js"></script>
   <?php
   include_once(__DIR__.'/../Includes/footer.inc.php');
