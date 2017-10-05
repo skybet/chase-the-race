@@ -57,6 +57,7 @@ $to = new SendGrid\Email("Example User", $_POST['email']);
 $content = new SendGrid\Content("text/html", "Dear");
 $mail = new SendGrid\Mail($from, $subject, $to, $content);
 $mail->setTemplateId("a80512c6-9215-4cf4-9378-7e3ddd2f9e02");
+$mail->personalization[0]->addSubstitution("-email-", $_POST['email']);
 $apiKey = getenv('SENDGRID_API_KEY');
 $sg = new \SendGrid($apiKey);
 $response = $sg->client->mail()->send()->post($mail);
