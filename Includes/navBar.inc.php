@@ -1,5 +1,5 @@
 <div id="navHeader">
-  <div style="container" class="container">
+  <div class="container">
     <div style="display: inline-block;"  id="logoDiv">
       <img src="/Images/logo.png" alt="logo">
     </div>
