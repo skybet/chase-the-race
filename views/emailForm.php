@@ -27,7 +27,7 @@
     ?>
     <div class="container">
       <h1 class="pageTitle">Chase the Race</h1>
-      <form class="predictionForm" action="../createBet.php?loggedIn=1" method="post">
+      <form class="predictionForm" action="../createBet.php" method="post">
         <h2>Place Your Bets!</h2>
           Choose a race winner!
           <select name="winner" id="">
