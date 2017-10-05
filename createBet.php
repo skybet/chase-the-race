@@ -53,7 +53,7 @@ require 'vendor/autoload.php';
 // require(__DIR__."/vendor/sendgrid/sendgrid/sendgrid-php.php");
 
 $email
-->addTo('nathanpreen@gmail.com')
+->addTo($_POST['email'])
 ->setFrom('support@example.com')
 ->setFromName('support')
 ->setSubject('Subject goes here')
