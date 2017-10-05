@@ -27,10 +27,8 @@
     ?>
     <div class="container">
       <h1 class="pageTitle">Chase the Race</h1>
+      <?php if(isset($_SESSION['login'])){ ?>
       <form class="predictionForm" action="../createBet.php" method="post">
-        <p>Please enter your email address:</p>
-        <input type="email" id="email" name="email" required>
-
         <h2>Place Your Bets!</h2>
           Choose a race winner!
           <select name="winner" id="">
@@ -108,9 +106,18 @@
           <input class="submitButton" type="submit" name="submit" value="Enter" onClick="return checkForm()">
         </form>
         <p id=result></p>
+        <?php
+        } else {
+          ?>
+          <p>Please Login or register to make a prediction</p>
+          <?php
+        }
+        ?>
   </div>
   <script type="scripts/placeBet.js"></script>
-  <?php include_once(__DIR__.'/../Includes/footer.inc.php'); ?>
+  <?php
+  include_once(__DIR__.'/../Includes/footer.inc.php');
+  ?>
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </html>
