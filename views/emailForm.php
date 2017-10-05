@@ -26,7 +26,7 @@
       include_once(__DIR__.'/../Includes/navBar.inc.php');
     ?>
 
-}
+
     <div class="container">
       <h1 class="pageTitle">Chase the Race</h1>
       <form class="predictionForm" action="../createBet.php" method="post">
@@ -85,14 +85,14 @@
             <option value="10">Nico Hulkenburg</option>
             <option value="11">Stoffel Vandoorne</option>
             <option value="12">Carlos Sainz</option>
-            <option value="13">Felope Massa</option>
+            <option value="13">Felipe Massa</option>
             <option value="14">Jolyon Palmer</option>
             <option value="15">Lance Stroll</option>
-            <option value="15">Pierre Gastly</option>
-            <option value="16">Romain Grosjean</option>
-            <option value="17">Kevin Magnussen</option>
-            <option value="18">Marcus Ericsson</option>
-            <option value="19">Pascal Wehrlein</option>
+            <option value="16">Pierre Gastly</option>
+            <option value="17">Romain Grosjean</option>
+            <option value="18">Kevin Magnussen</option>
+            <option value="19">Marcus Ericsson</option>
+            <option value="20">Pascal Wehrlein</option>
           </select>
           <br>
 
