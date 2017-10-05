@@ -13,6 +13,7 @@ $predictionmanager = new PredictionManager(getDB());
 
 $predictionmanager->save($user->id, $_POST);
 
+$user = unserialize (serialize ($_SESSION['user']));
 // using SendGrid's PHP Library
 // https://github.com/sendgrid/sendgrid-php
 // If you are using Composer (recommended)
@@ -21,7 +22,7 @@ require 'vendor/autoload.php';
 // require(__DIR__."/vendor/sendgrid/sendgrid/sendgrid-php.php");
 $from = new SendGrid\Email("ChaseTheRace", "entries@chasetherace.com");
 $subject = "Your entry has been recorded!";
-$to = new SendGrid\Email($_POST['email'], $_POST['email']);
+$to = new SendGrid\Email($user->email, $user->email);
 $content = new SendGrid\Content("text/html", " ");
 $mail = new SendGrid\Mail($from, $subject, $to, $content);
 $mail->setTemplateId("a80512c6-9215-4cf4-9378-7e3ddd2f9e02");
