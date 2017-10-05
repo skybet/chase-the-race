@@ -1,7 +1,7 @@
 <?php
 
 include("db.php");
-include("../classes/predictionmanager.php");
+include("../../private/classes/predictionmanager.php");
 
 function drawWinner(){
     $pm = new PredictionManager(getDB());
@@ -41,7 +41,7 @@ function drawWinner(){
                   </tr>";
         }
         echo "</table>";
-    
+
 
 
         // echo "A tiebreak has been called.<br>";

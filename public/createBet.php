@@ -1,8 +1,8 @@
 <?php
-include 'classes/usermanager.php';
-include 'classes/predictionmanager.php';
-include 'classes/user.php';
-include 'classes/prediction.php';
+include '../private/classes/usermanager.php';
+include '../private/classes/predictionmanager.php';
+include '../private/classes/user.php';
+include '../private/classes/prediction.php';
 include 'logic/db.php';
 include 'logic/sessions.php';
 
@@ -16,22 +16,22 @@ $predictionmanager->save($user->id, $_POST);
 // using SendGrid's PHP Library
 // https://github.com/sendgrid/sendgrid-php
 // If you are using Composer (recommended)
-require 'vendor/autoload.php';
-// If you are not using Composer
-// require(__DIR__."/vendor/sendgrid/sendgrid/sendgrid-php.php");
-$from = new SendGrid\Email("ChaseTheRace", "entries@chasetherace.com");
-$subject = "Your entry has been recorded!";
-$to = new SendGrid\Email($_POST['email'], $_POST['email']);
-$content = new SendGrid\Content("text/html", " ");
-$mail = new SendGrid\Mail($from, $subject, $to, $content);
-$mail->setTemplateId("a80512c6-9215-4cf4-9378-7e3ddd2f9e02");
-$mail->personalization[0]->addSubstitution("[%email%]", $_POST['email']);
-$apiKey = getenv('SENDGRID_API_KEY');
-$sg = new \SendGrid($apiKey);
-$response = $sg->client->mail()->send()->post($mail);
-echo $response->statusCode();
-print_r($response->headers());
-echo $response->body();
+// require '../private/vendor/autoload.php';
+// // If you are not using Composer
+// // require(__DIR__."/vendor/sendgrid/sendgrid/sendgrid-php.php");
+// $from = new SendGrid\Email("ChaseTheRace", "entries@chasetherace.com");
+// $subject = "Your entry has been recorded!";
+// $to = new SendGrid\Email($_POST['email'], $_POST['email']);
+// $content = new SendGrid\Content("text/html", " ");
+// $mail = new SendGrid\Mail($from, $subject, $to, $content);
+// $mail->setTemplateId("a80512c6-9215-4cf4-9378-7e3ddd2f9e02");
+// $mail->personalization[0]->addSubstitution("[%email%]", $_POST['email']);
+// $apiKey = getenv('SENDGRID_API_KEY');
+// $sg = new \SendGrid($apiKey);
+// $response = $sg->client->mail()->send()->post($mail);
+// echo $response->statusCode();
+// print_r($response->headers());
+// echo $response->body();
 
 // $mail = new PHPMailer;
 

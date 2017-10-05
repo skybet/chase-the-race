@@ -2,8 +2,8 @@
 // check login and create SESSION and count attempts
 include 'db.php';
 include 'sessions.php';
-include '../classes/usermanager.php';
-include '../classes/user.php';
+include '../../private/classes/usermanager.php';
+include '../../private/classes/user.php';
 
 $db = getDB();
 
