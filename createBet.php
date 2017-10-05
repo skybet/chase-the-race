@@ -51,18 +51,41 @@ $predictionmanager->save($user->id, $_POST);
 require 'vendor/autoload.php';
 // If you are not using Composer
 // require(__DIR__."/vendor/sendgrid/sendgrid/sendgrid-php.php");
-$from = new SendGrid\Email("Example User", "test@example.com");
-$subject = "Your entry has been recorded!";
-$to = new SendGrid\Email("Example User", $_POST['email']);
-$content = new SendGrid\Content("text/plain", "Dear, your entry has been recorded into the draw!");
-$mail = new SendGrid\Mail($from, $subject, $to, $content);
-$apiKey = getenv('SENDGRID_API_KEY');
-$sg = new \SendGrid($apiKey);
-$response = $sg->client->mail()->send()->post($mail);
-echo $response->statusCode();
-print_r($response->headers());
-echo $response->body();
 
+$email
+->addTo('nathanpreen@gmail.com')
+->setFrom('support@example.com')
+->setFromName('support')
+->setSubject('Subject goes here')
+->setHTML('Hello!')
+->addCategory('Welcome Mail')
+->addFilter('templates', 'enabled', 1)
+->addFilter('templates', 'template_id', 'a80512c6-9215-4cf4-9378-7e3ddd2f9e02');
+$response = $sendgrid->send($email);
+
+// $from = new SendGrid\Email("Example User", "test@example.com");
+// $subject = "Your entry has been recorded!";
+// $to = new SendGrid\Email("Example User", $_POST['email']);
+// $content = new SendGrid\Content("text/plain", "Dear, your entry has been recorded into the draw!");
+// $mail = new SendGrid\Mail($from, $subject, $to, $content);
+// $apiKey = getenv('SENDGRID_API_KEY');
+// $sg = new \SendGrid($apiKey);
+// $response = $sg->client->mail()->send()->post($mail);
+// echo $response->statusCode();
+// print_r($response->headers());
+// echo $response->body();
+
+
+// $email
+// ->addTo($user->getEmail())
+// ->setFrom('support@example.com')
+// ->setFromName('support')
+// ->setSubject('Subject goes here')
+// ->setText('Hello!')
+// ->addCategory('Welcome Mail')
+// ->addFilter('templates', 'enabled', 1)
+// ->addFilter('templates', 'template_id', $this->welcomeTemplateID)
+// ;
 // $mail = new PHPMailer;
 
 // $mail->isSMTP();  // Set mailer to use SMTP
