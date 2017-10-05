@@ -93,6 +93,8 @@
             <option value="18">Kevin Magnussen</option>
             <option value="19">Marcus Ericsson</option>
             <option value="20">Pascal Wehrlein</option>
+            <option value="21">No retiree</option>
+
           </select>
           <br>
 
