@@ -33,7 +33,8 @@ print_r($response->headers());
 echo $response->body();
 
 header('Location: confirmation.php');
-}else{
-header('Location: index.php?notLoggedIn')
+}else {
+header('Location: index.php?notLoggedIn');
 } 
+
 ?>
