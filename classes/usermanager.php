@@ -44,16 +44,12 @@ class UserManager {
 
       $r->execute(['email' => $email]);
 
-
       if (count($r->fetchAll()) > 0){
-
-              return true;
-
-            }
+        return true;
+      }
       else {
         return false;
       }
-
   }
 
 }
