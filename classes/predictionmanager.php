@@ -33,7 +33,7 @@ class PredictionManager {
     }
 
     $stmt = $this->db->prepare("
-      SELECT users.email, predictions.tiebreaker 
+      SELECT users.email, users.domain, users.ip, predictions.tiebreaker 
       FROM Users 
       INNER JOIN Predictions
       ON users.id = predictions.user_id 
