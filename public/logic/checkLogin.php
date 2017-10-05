@@ -1,6 +1,6 @@
 <?php
 // check login and create SESSION and count attempts
-include 'db.php';
+include '../../private/db.php';
 include 'sessions.php';
 include '../../private/classes/usermanager.php';
 include '../../private/classes/user.php';

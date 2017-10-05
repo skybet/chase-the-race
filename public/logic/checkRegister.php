@@ -1,6 +1,6 @@
 <?php
 include('sessions.php');
-include('db.php');
+include('../../private/db.php');
 include '../classes/usermanager.php';
 include '../classes/user.php';
 

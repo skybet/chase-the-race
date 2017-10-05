@@ -3,7 +3,7 @@ include '../private/classes/usermanager.php';
 include '../private/classes/predictionmanager.php';
 include '../private/classes/user.php';
 include '../private/classes/prediction.php';
-include 'logic/db.php';
+include '../private/db.php';
 include 'logic/sessions.php';
 
 $user = unserialize (serialize ($_SESSION['user']));

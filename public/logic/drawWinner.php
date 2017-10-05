@@ -1,6 +1,6 @@
 <?php
 
-include("db.php");
+include("../../private/db.php");
 include("../../private/classes/predictionmanager.php");
 
 function drawWinner(){
