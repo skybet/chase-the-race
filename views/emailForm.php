@@ -110,7 +110,7 @@
   </div>
   <?php
     if(isset($_GET['notLoggedIn'])){
-    echo "You must be logged in to place a predication";
+    echo "You must be logged in to place a prediction";
     }
 ?>
   <script type="scripts/placeBet.js"></script>
