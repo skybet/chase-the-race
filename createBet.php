@@ -54,7 +54,7 @@ require 'vendor/autoload.php';
 $from = new SendGrid\Email("Example User", "test@example.com");
 $subject = "Your entry has been recorded!";
 $to = new SendGrid\Email("Example User", $_POST['email']);
-$content = new SendGrid\Content("text/plain", "Dear");
+$content = new SendGrid\Content("text/html", "Dear");
 $mail = new SendGrid\Mail($from, $subject, $to, $content);
 $mail->setTemplateId("a80512c6-9215-4cf4-9378-7e3ddd2f9e02");
 $apiKey = getenv('SENDGRID_API_KEY');
