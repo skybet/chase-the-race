@@ -6,7 +6,7 @@ include 'classes/prediction.php';
 include 'logic/db.php';
 include 'logic/sessions.php';
 
-if ($submit_ok)
+if ($submit_ok == true)
 {
 $user = unserialize (serialize ($_SESSION['user']));
 
