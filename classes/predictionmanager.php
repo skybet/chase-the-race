@@ -53,5 +53,27 @@ class PredictionManager {
     
     return $results;
   }
+
+  public function getIPCount($ip){
+    $stmt = $this->db->prepare("
+      SELECT COUNT(ip) FROM Users WHERE ip = :ip");
+  
+    $stmt->execute(['ip' => $ip]);
+    
+    $ipCount = $stmt->fetch();
+
+    return $ipCount;
+  }
+
+  public function getDomainCount($domain){
+    $stmt = $this->db->prepare("
+      SELECT COUNT(domain) FROM Users WHERE domain = :domain");
+  
+    $stmt->execute(['domain' => $domain]);
+    
+    $domainCount = $stmt->fetch();
+
+    return $domainCount;
+  }
 }
 ?>

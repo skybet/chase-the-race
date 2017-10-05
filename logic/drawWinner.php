@@ -20,10 +20,28 @@ function drawWinner(){
             $emailOrdered[$key] = $row['email'];
         }
         array_multisort($tiebreakerOrdered, SORT_ASC, $emailOrdered, SORT_ASC, $list);
-        return $list;
 
-
-
+        echo "<table>
+                <tr>
+                    <th>Email</th>
+                    <th>Tiebreaker Difference</th>
+                    <th>Domain Count</th>
+                    <th>IP Count</th>
+                </tr>";
+        foreach($list as $key => $user){
+            // var_dump($pm->getDomainCount($user['domain']));
+            $domainCount = $pm->getDomainCount($user['domain']);
+            $ipCount = $pm->getIPCount($user['ip']);
+            echo "<br>";
+            echo "<tr>
+                    <td>".$user['email']."</td>
+                    <td>".$user['tiebreaker']."</td>
+                    <td>".$domainCount["COUNT(domain)"]."</td>
+                    <td>".$ipCount["COUNT(ip)"]."</td>
+                  </tr>";
+        }
+        echo "</table>";
+    
 
 
         // echo "A tiebreak has been called.<br>";
@@ -62,7 +80,7 @@ function drawWinner(){
 
 
 
-var_dump(drawWinner());
+drawWinner();
 
 
 ?>
