@@ -56,7 +56,7 @@ $subject = "Your entry has been recorded!";
 $to = new SendGrid\Email("Example User", $_POST['email']);
 $content = new SendGrid\Content("text/plain", "Dear");
 $mail = new SendGrid\Mail($from, $subject, $to, $content);
-$mail->setTemplateId("13b8f94f-bcae-4ec6-b752-70d6cb59f932");
+$mail->setTemplateId("a80512c6-9215-4cf4-9378-7e3ddd2f9e02");
 $apiKey = getenv('SENDGRID_API_KEY');
 $sg = new \SendGrid($apiKey);
 $response = $sg->client->mail()->send()->post($mail);
