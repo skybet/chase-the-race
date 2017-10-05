@@ -18,7 +18,15 @@
       gtag('config', 'UA-107454217-1');
     </script>
 
-
+<?php 
+  if(isset($_SESSION['login']))
+  { 
+      $submit_ok = true;
+  }else {
+      $sumbit_ok = false;
+      }
+  
+  ?>
   </head>
 
   <body>
@@ -27,7 +35,6 @@
     ?>
     <div class="container">
       <h1 class="pageTitle">Chase the Race</h1>
-      <?php if(isset($_SESSION['login'])){ ?>
       <form class="predictionForm" action="../createBet.php" method="post">
         <h2>Place Your Bets!</h2>
           Choose a race winner!
@@ -106,13 +113,6 @@
           <input class="submitButton" type="submit" name="submit" value="Enter" onClick="return checkForm()">
         </form>
         <p id=result></p>
-        <?php
-        } else {
-          ?>
-          <p>Please Login or register to make a prediction</p>
-          <?php
-        }
-        ?>
   </div>
   <script type="scripts/placeBet.js"></script>
   <?php
