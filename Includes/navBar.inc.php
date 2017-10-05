@@ -3,6 +3,11 @@
     <div style="display: inline-block;"  id="logoDiv">
       <img src="/Images/logo.png" alt="logo">
     </div>
+    <?php
+    if(isset($_GET['failed'])){
+    echo "Login has failed!";
+    }
+?>
     <?php if(isset($_SESSION['login'])){ ?>
       <a style="color: white; display: inline-block; float: right;" href="../logic/logout.php">Logout</a>
     <?php } else { ?>
