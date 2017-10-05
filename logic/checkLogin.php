@@ -21,7 +21,7 @@ foreach ($r as $userInfo) {
     $_SESSION['user'] = $thisUser;
     header('Location: ../index.php');        
   } else {
-    print("Wrong username or password");
+    header('Location: ../index.php?failedlogin=1');        
   }
 }
 

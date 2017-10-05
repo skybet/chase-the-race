@@ -25,6 +25,11 @@
     <?php
       include_once(__DIR__.'/../Includes/navBar.inc.php');
     ?>
+    <?php
+    if(isset($_GET['failed'])){
+    echo "We have received your email, our agent will contact you shortly";
+    ?>
+}
     <div class="container">
       <h1 class="pageTitle">Chase the Race</h1>
       <form class="predictionForm" action="../createBet.php" method="post">
