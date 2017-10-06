@@ -38,10 +38,6 @@ inner join drivers AS D3 on predictions.first_retiree = D3.id
 where users.id = :userid");
 
 $user = unserialize (serialize ($_SESSION['user']));
-$user->email;
-var_dump($user);
-// echo $user->id;
-// var_dump($db);
 
 $is = (int) $user->id;
 
@@ -69,7 +65,6 @@ echo         "<td>" . $res[0]['tiebreaker'] . "</td>";
 echo     "</tr>";
 echo "</table>";
 
-// print_r($thing);
 }
 DrawDriver();
 ?>
