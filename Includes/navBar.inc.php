@@ -1,10 +1,7 @@
 <div id="navHeader">
   <div class="container-header">
     <div style="display: inline-block;"  id="logoDiv">
-<<<<<<< HEAD
-=======
     <a href="../index.php">
->>>>>>> 711eca839843106155fad9dde3b27dc8630dfe3c
       <img src="/Images/logo.png" alt="logo">
     </a>
     </div>
