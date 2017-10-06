@@ -16,7 +16,7 @@ where users.id = :userid");
 
 $user = unserialize (serialize ($_SESSION['user']));
 //$user = (user) $user;
-var_dump($user);
+// var_dump($user);
 // var_dump($user['id']);
 
 // echo $user->id;
@@ -26,9 +26,9 @@ $r = $stmt->execute([
     'userid'  => (int)$user->id
     ]);
 
-// $thing = $r->fetchAll();
+$thing = $r->fetchAll();
 
-// print_r($thing);
+print_r($thing);
 }
 DrawDriver();
 ?>
