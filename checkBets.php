@@ -20,8 +20,8 @@ $user->email;
 $r = $stmt->execute([
     'userid'  => $user->id
 ]);
-
-var_dump($stmt);
+$thing = $r->fetchAll();
+var_dump($thing);
 }
 DrawDriver();
 ?>
