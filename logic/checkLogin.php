@@ -13,8 +13,8 @@ $r = $db->prepare(
 );
 $r->execute(['email' => $_POST['email']]);
 // var_dump($r->fetchAll());
-$failed = $r->fetchAll();
-var_dump($r);
+// $failed = $r->fetchAll();
+// var_dump($r);
 if (isset($r)){
 foreach ($r as $userInfo) {
   $userFactory = new UserManager($db);
