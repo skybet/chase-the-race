@@ -23,7 +23,7 @@ $user = unserialize (serialize ($_SESSION['user']));
 // var_dump($db);
 
 $r = $stmt->execute([
-    'userid'  => (int)$user->id
+    'userid'  => $user->id
     ]);
 
 $thing = $r->fetchAll();
