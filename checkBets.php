@@ -18,13 +18,17 @@ $user = unserialize (serialize ($_SESSION['user']));
 
 $is = (int) $user->id;
 
-echo $is;
 $stmt->execute([
     'userid'  => $is
     ]);
 $res = $stmt->fetchAll();
 
 echo $res[0]['user_id'];
+echo $res[0]['prediction'];
+echo $res[0]['fastest_pit_stop'];
+echo $res[0]['first_retiree'];
+echo $res[0]['safety_car'];
+echo $res[0]['tiebreaker'];
 
 }
 DrawDriver();
