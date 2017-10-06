@@ -12,7 +12,7 @@ body {
   outline: none;
   width: 100%;
   height: auto;
-  color: #fff;
+  
   background: linear-gradient(90deg, #000000 5%, #2C666E);
   position: static;
   border-bottom: 4px solid #D63E80;
@@ -33,6 +33,11 @@ body {
   background-color:rgba(182,203,212,0.8);
   border-color: rgba(212, 66, 128, 0.4)
 
+}
+
+h3{
+  color: white;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
 
 .container-header {
@@ -56,6 +61,8 @@ input[type=number]{
   width: 40px;
 
 }
+
+
 
 input[type=checkbox] {
 
