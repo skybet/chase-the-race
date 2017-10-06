@@ -2,7 +2,7 @@
   <div class="container-header">
     <div style="display: inline-block;"  id="logoDiv">
     <a href="../index.php">
-      <img src="/Images/logo.png" alt="logo">
+      <img style="padding-top:10px" src="/Images/logo.png" alt="logo">
     </a>
     </div>
     <?php if(isset($_SESSION['login'])){ ?>
