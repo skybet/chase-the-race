@@ -25,9 +25,9 @@ $stmt->execute([
     ]);
 $res = $stmt->fetchAll();
 var_dump($res);
-echo $res[0]['DriverName'];
-echo $res[0]['fastest_pit_stop'];
-echo $res[0]['first_retiree'];
+echo $res[0]['DriverWin'];
+echo $res[0]['FastestP'];
+echo $res[0]['FirstR'];
 echo $res[0]['safety_car'];
 echo $res[0]['tiebreaker'];
 
