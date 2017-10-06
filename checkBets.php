@@ -1,6 +1,7 @@
 <?php
 include 'logic/db.php';
 include 'logic/sessions.php'; 
+include 'classes/drivers.php';
 
 function DrawDriver(){
 $dm= new Driver(getDB());
