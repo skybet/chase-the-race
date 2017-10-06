@@ -10,15 +10,15 @@
       <form name="registerForm" action="logic/checkRegister.php" method="post">
         <label>Email</label>
         <br/>
-        <input type="email" name="email">
+        <input type="email" name="email" required>
         <br/>
         <label>Password</label>
         <br/>
-        <input type="password" name="password">
+        <input type="password" name="password" required>
         <br/>
         <label>Check Password</label>
         <br/>
-        <input type="password" name="checkPassword">
+        <input type="password" name="checkPassword" required>
         <br/>
         <input type="submit">
       </form>

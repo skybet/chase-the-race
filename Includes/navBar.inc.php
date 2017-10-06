@@ -1,8 +1,9 @@
 <div id="navHeader">
   <div class="container-header">
     <div style="display: inline-block;"  id="logoDiv">
-    <a href=https://chase-the-race.herokuapp.com>
+    <a href="../index.php">
       <img src="/Images/logo.png" alt="logo">
+    </a>
     </div>
     <?php if(isset($_SESSION['login'])){ ?>
       <a style="color: white; display: inline-block; float: right;" href="../logic/logout.php">Logout</a>
