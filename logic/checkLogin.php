@@ -29,6 +29,7 @@ foreach ($r as $userInfo) {
   }
 }
 }
-else header('Location: ..index.php?failed');
-
+else {
+  header('Location: ../index.php?failed');
+}
 ?>
