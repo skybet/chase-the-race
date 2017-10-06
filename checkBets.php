@@ -1,3 +1,13 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name=viewport content="width=device-width,initial-scale=1.0">
+    <title>Chase the Race</title>
+    <link rel="stylesheet" type="text/css" href="../css/chaseTheRaceStyle.css"/>
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    </head>
+
 <?php
 include 'logic/db.php';
 include 'logic/sessions.php'; 
@@ -34,3 +44,4 @@ echo $res[0]['tiebreaker'];
 }
 DrawDriver();
 ?>
+</html>
