@@ -44,24 +44,19 @@ $is = (int) $user->id;
 $stmt->execute([
     'userid'  => $is
     ]);
+
 $res = $stmt->fetchAll();
-// var_dump($res);
-// echo ;
-// echo $res[0]['FastestP'];
-// echo $res[0]['FirstR'];
-// echo $res[0]['safety_car'];
-// echo $res[0]['tiebreaker'];
-?>
-<table>
-    <tr>
-        <td><?$res[0]['DriverWin']?></td>
-        <td><?$res[0]['FastestP']?></td>
-        <td><?$res[0]['FirstR']?></td>
-        <td><?$res[0]['safety_car']?></td>
-        <td><?$res[0]['tiebreaker']?></td>
-    </tr>
-</table>
-<?
+
+
+echo "<table>";
+echo     "<tr>";
+echo         "<td>$res[0]['DriverWin']</td>";
+echo         "<td>$res[0]['FastestP'</td>";
+echo         "<td>$res[0]['FirstR']</td>";
+echo         "<td>$res[0]['safety_car']</td>";
+echo         "<td>$res[0]['tiebreaker']</td>";
+echo     "</tr>";
+echo "</table>";
 
 }
 DrawDriver();
