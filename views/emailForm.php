@@ -41,15 +41,13 @@
 
     <div class="container">
 
-
-      <form class="predictionForm" action="../createBet.php" method="post">
+      <form class="predictionForm" action="../createBet.php" method="post" onsubmit="return checkForm()">
         <div class="row">
-
 
           <div class="col-sm-5 content">
             <div class="card">
               <h5> Race Winner </h5> <br>
-              <select class="form-control" name="winner" id="">
+              <select class="form-control" name="winner" id="winner">
               <option value="1">Lewis Hamilton</option>
               <option value="2">Sebastian Vettel</option>
               <option value="3">Max Verstappen</option>
@@ -95,8 +93,6 @@
             </div>
           </div>
           <br>
-
-
 
           <div class="col-sm-5 content">
             <div class="card">
@@ -151,7 +147,7 @@
         <div class="enterCard">
 
       </form>
-      <input class="btn btn-primary" type="submit" name="submit" value="Enter" onClick="return checkForm()">
+      <input class="btn btn-primary" type="submit" name="submit" value="Enter">
       </form>
 
 

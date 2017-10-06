@@ -1,6 +1,5 @@
-<html>
-
-<head>
+<html>   
+      <head>
   <meta charset="utf-8">
   <meta name=viewport content="width=device-width,initial-scale=1.0">
   <title>Register</title>
@@ -12,9 +11,6 @@
 <body>
   <?php include_once(__DIR__.'/Includes/navBar.inc.php'); ?>
 
-
- 
-
   <div class="jumbotron">
       <div class="container text-center">
         <h1 class="pageTitle">Chase the Race</h1>
@@ -23,8 +19,6 @@
     </div>
 
     <div class="container">
-
-  
   <div class="row"></div>
     <form name="registerForm" action="logic/checkRegister.php" method="post">
       <div class="row">

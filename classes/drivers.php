@@ -3,6 +3,7 @@ class Driver {
   private $db;
   public $id;
   public $DriverName;
+  
 
   public function __construct(PDO $db = null){
     $this->db = $db;
