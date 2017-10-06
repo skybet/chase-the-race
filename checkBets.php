@@ -5,34 +5,18 @@ include 'logic/sessions.php';
 function DrawDriver(){
 $dm= new Driver(getDB());
 
-$stmt = $this->db->prepare("
-SELECT id, DriverName FROM drivers");
+$stmt = $this->db->prepare("select user_id, prediction, fastest_pit_stop, first_retiree, safety_car, tiebreaker
+from predictions
+inner join users on predictions.user_id = users.id
+inner join drivers on predictions.prediction = drivers.id
+where users.id = :userid");
 
-$r = $stmt->execute([
-    'id'  => $uid,
-    'DriverName' => $drivername
-]);
+$user->email;
 
-
-// INNER JOIN Predictions
-// ON users.id = predictions.user_id 
-// WHERE (predictions.prediction = :winner AND 
-// predictions.fastest_pit_stop = :pitstop AND 
-// predictions.first_retiree = :retiree AND 
-// predictions.safety_car = :safetycar)");
-
-// $stmt->execute([
-// 'winner' => $post['winner'],
-// 'pitstop' => $post['fastestPitStop'],
-// 'retiree' => $post['retiree'],
-// 'safetycar' => $car
+// $r = $stmt->execute([
+//     'userid'  => $uid
 // ]);
 
-var_dump($r);
+var_dump($user);
 }
-    // $r = $db->prepare(
-    //     "select id, DriverName from drivers"
-    //   );
-    //   $r->execute(['email' => $_POST['email']]);
-      
 ?>
