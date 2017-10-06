@@ -8,7 +8,7 @@ function DrawDriver(){
     $db = getDB();
 $dm= new Driver($db);
 
-$stmt = $db->prepare("select user_id, D1.DriverName, D2.DriverName, D3.DriverName, safety_car, tiebreaker
+$stmt = $db->prepare("select user_id, D1.DriverName AS DriverWin, D2.DriverName AS FastestP, D3.DriverName AS FirstR, safety_car, tiebreaker
 from predictions
 inner join users on predictions.user_id = users.id
 inner join drivers AS D1 on predictions.prediction = D1.id
