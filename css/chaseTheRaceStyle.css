@@ -3,6 +3,9 @@ body {
   background: #367778;
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
   color: #E0DEDA;
+  background-image: url("../Images/car.png");
+  background-color: #cccccc;
+  background-size: cover;
 }
 /*Nav*/
 #navHeader {
@@ -15,35 +18,122 @@ body {
   border-bottom: 4px solid #D63E80;
 }
 
+.jumbotron {
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+ background-color: transparent !important;
+ color:#fff !important;
+}
+
+.content{
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  margin-top: 10px;
+  border-radius: 10px ;
+  border-style: solid;
+  border-width: 1px;
+  background-color:rgba(182,203,212,0.8);
+  border-color: rgba(212, 66, 128, 0.4)
+  
+}
+
+.container-header {
+  text-align: left;
+  margin-left: 7%;
+  margin-right: 7%;
+}
+
 #logoDiv img {
   height: 90px;
   width: auto;
 }
 
+select{ 
+margin: 20px;
+width: 20%; 
+text-align-last: center; 
+}
+
+input[type=number]{
+  width: 40px;
+
+}
+
+input[type=checkbox] {
+
+  transform: scale(2);
+}
+
 .container {
+  text-align: center;
   margin-left: 7%;
   margin-right: 7%;
+  
+}
+  
+
+.bottomBets{
+  margin-left: 25%;
+
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  width: auto\9; /* ie8 */
 }
 
 .pageTitle {
   text-align: center;
 }
 
+.text-muted {
+  color: #636c72!important;
+}
+
+.card {
+ padding: 15px;
+
+}
+
+.cardB {
+  padding: 24px;
+ 
+ }
+
+.loginForm{
+  color: white;
+}
+
+label{
+  color: white;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  font-weight: normal;
+}
+
+a{
+  color: white;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
 .submitButton {
   width: 100px;
   height: 40px;
   border: none;
   font-size: 16px;
-  background-color: #D63E80;
+  background-color: #8B5A70;
   color: #E0DEDA;
 }
 
 select {
   font-size: 14px;
+  width: auto;
 }
 
 input {
   font-size: 14px;
+}
+
+.col{
+  height: 60px;
 }
 
 @media(max-width: 900px){
@@ -69,5 +159,6 @@ input {
 @media(max-width: 700px){
   .loginForm {
     float: none !important;
+    color: white;
   }
 }
