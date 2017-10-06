@@ -17,6 +17,6 @@ $user->email;
 //     'userid'  => $uid
 // ]);
 
-echo($user);
+var_dump($user);
 }
 ?>
