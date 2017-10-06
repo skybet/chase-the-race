@@ -15,11 +15,14 @@ where users.id = :userid");
 
 $user = unserialize (serialize ($_SESSION['user']));
 $user->email;
+echo $user->id;
+var_dump($db);
 
 $r = $stmt->execute([
-    'userid'  => $user->id]);
+    'userid'  => (int)$user->id
+    ]);
 
-$thing = $r->fetchAll();
+// $thing = $r->fetchAll();
 
 print_r($thing);
 }
