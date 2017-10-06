@@ -1,5 +1,5 @@
 <?php
-class User {
+class User implements Serializable{
   private $db;
   public $id;
   public $email;
