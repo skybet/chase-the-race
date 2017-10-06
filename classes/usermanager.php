@@ -40,6 +40,23 @@ class UserManager {
     return $users[0];
   }
 
+  public function doesEmailExist($email)
+ {
+    $r = $this->db->prepare(
+      "select email
+      from Users
+      where email= :email");
+
+      $r->execute(['email' => $email]);
+
+      if (count($r->fetchAll()) > 0){
+        return true;
+      }
+      else {
+        return false;
+      }
+  }
+
 }
 
 ?>
