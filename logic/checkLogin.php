@@ -12,7 +12,7 @@ $r = $db->prepare(
   "select id, email, password from users where email = :email"
 );
 $r->execute(['email' => $_POST['email']]);
-
+var_dump($r);
 foreach ($r as $userInfo) {
   $userFactory = new UserManager($db);
   $thisUser = $userFactory->byEmail($userInfo['email']);
