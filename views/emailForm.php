@@ -4,7 +4,7 @@
     <meta name=viewport content="width=device-width,initial-scale=1.0">
     <title>Chase the Race</title>
     <link rel="stylesheet" type="text/css" href="../css/chaseTheRaceStyle.css"/>
-    <link rel="icon" href="../images/favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="../Images/favicon.ico" type="image/x-icon"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="../scripts/formValidation.js"></script>
 
@@ -27,13 +27,11 @@
     ?>
     <div class="container">
       <h1 class="pageTitle">Chase the Race</h1>
-      <form class="predictionForm" action="../createBet.php" method="post">
-        <p>Please enter your email address:</p>
-        <input type="email" id="email" name="email" required>
-
+      <?php if(isset($_SESSION['login'])){ ?>
+      <form class="predictionForm" action="../createBet.php" method="post" onsubmit="return checkForm()">
         <h2>Place Your Bets!</h2>
           Choose a race winner!
-          <select name="winner" id="">
+          <select name="winner" id="winner">
             <option value="1">Lewis Hamilton</option>
             <option value="2">Sebastian Vettel</option>
             <option value="3">Max Verstappen</option>
@@ -105,12 +103,21 @@
           <input name="tiebreaker" id="tiebreaker" type="number" min="0" step="1"  required >
           <br/><br/>
 
-          <input class="submitButton" type="submit" name="submit" value="Enter" onClick="return checkForm()">
+          <input class="submitButton" type="submit" name="submit" value="Enter">
         </form>
         <p id=result></p>
+        <?php
+        } else {
+          ?>
+          <p>Please Login or register to make a prediction</p>
+          <?php
+        }
+        ?>
   </div>
   <script type="scripts/placeBet.js"></script>
-  <?php include_once(__DIR__.'/../Includes/footer.inc.php'); ?>
+  <?php
+  include_once(__DIR__.'/../Includes/footer.inc.php');
+  ?>
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </html>

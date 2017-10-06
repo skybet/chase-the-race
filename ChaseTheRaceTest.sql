@@ -8,7 +8,11 @@ grant ALL PRIVILEGES on ChaseTheRace.* TO 'adminUser'@'localhost';
 DROP TABLE IF EXISTS Users;
 create table Users (
   id int not null auto_increment primary key,
-  email varchar(250) not null
+  email varchar(250) not null,
+  password varchar(500) not null,
+  domain varchar(50) not null,
+  date_created datetime not null,
+  ip varchar(20) not null
 );
 
 DROP TABLE IF EXISTS Predictions;
