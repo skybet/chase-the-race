@@ -143,10 +143,8 @@
           </div>
 
         </div>
-
-
+        <div class="row"><p style="color:rgba(0,0,0,0)">|</p></div>
         <div class="enterCard">
-
       </form>
       <input class="btn btn-primary" type="submit" name="submit" value="Enter">
       </form>
@@ -154,7 +152,7 @@
 
       </div>
 
-    
+
       <?php
     if(isset($_GET['notLoggedIn'])){
     echo "<h3 style='color: white;font-family: Futura, \"Trebuchet MS\", Arial, sans-serif'>You must be logged in to place a prediction<h3>";
