@@ -1,5 +1,5 @@
 <div id="navHeader">
-  <div class="container">
+  <div class="container-header">
     <div style="display: inline-block;"  id="logoDiv">
     <a href=https://chase-the-race.herokuapp.com>
       <img src="/Images/logo.png" alt="logo">
