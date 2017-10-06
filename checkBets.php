@@ -49,6 +49,12 @@ $res = $stmt->fetchAll();
 
 
 echo "<table>";
+echo "<tr>";
+echo "<th>Driver Winner<th>";
+echo "<th>Fastest Lap<th>";
+echo "<th>First Retiree<th>";
+echo "<th>Safety Car?<th>";
+echo "<th>Tie Breaker Amount<th>";
 echo     "<tr>";
 echo         "<td>" . $res[0]['DriverWin'] ."</td>";
 echo         "<td>" . $res[0]['FastestP'] . "</td>";
