@@ -13,7 +13,7 @@ function getDB(){
   // $host = '127.0.0.1';
   // $db   = 'ChaseTheRace';
   // $user = 'adminUser';
-  // $pass = 'mypass';
+  // $pass = 'The password';
 
   $dsn = "mysql:host=$host;dbname=$db";
   $pdo = new PDO($dsn, $user, $pass);
