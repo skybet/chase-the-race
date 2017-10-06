@@ -6,6 +6,16 @@
   <link rel="stylesheet" type="text/css" href="../css/chaseTheRaceStyle.css"/>
   <link rel="icon" href="../Images/favicon.ico" type="image/x-icon"/>
     <title>Draw Results</title>
+
+  <style>
+    table{
+        text-align: center;
+        padding: 5px;
+        width: 100%;
+    }
+    
+    
+  </style>
 </head>
 <body>
   <?php include_once('../Includes/navBar.inc.php'); ?>
