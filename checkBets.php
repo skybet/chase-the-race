@@ -15,7 +15,8 @@ where users.id = :userid");
 
 $user = unserialize (serialize ($_SESSION['user']));
 $user->email;
-var_dump($user);
+
+var_dump($user->id);
 // echo $user->id;
 // var_dump($db);
 
