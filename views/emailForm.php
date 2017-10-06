@@ -157,10 +157,10 @@
 
       </div>
 
-
+    
       <?php
     if(isset($_GET['notLoggedIn'])){
-    echo "You must be logged in to place a prediction";
+    echo "<h3 style='color: white;font-family: Futura, \"Trebuchet MS\", Arial, sans-serif'>You must be logged in to place a prediction<h3>";
     }
 ?>
     </div>
