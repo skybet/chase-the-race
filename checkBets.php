@@ -26,7 +26,7 @@ $r = $stmt->execute([
     'userid'  => $user->id
     ]);
 
-$thing = $r->fetchAll();
+$thing = $r->fetchAll(PDO::FETCH_COLUMN, 0);
 
 print_r($thing);
 }
