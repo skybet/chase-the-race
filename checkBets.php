@@ -22,7 +22,7 @@ $stmt->execute([
     'userid'  => $is
     ]);
 $res = $stmt->fetchAll();
-
+var_dump($res);
 echo $res[0]['user_id'];
 echo $res[0]['prediction'];
 echo $res[0]['drivers.DriverName'];
