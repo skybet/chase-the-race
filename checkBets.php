@@ -25,7 +25,7 @@ $res = $stmt->fetchAll();
 var_dump($res);
 echo $res[0]['user_id'];
 echo $res[0]['prediction'];
-echo $res[0]['drivers.DriverName'];
+echo $res[0]['DriverName'];
 echo $res[0]['fastest_pit_stop'];
 echo $res[0]['first_retiree'];
 echo $res[0]['safety_car'];
