@@ -24,7 +24,7 @@ $stmt->execute([
     'userid'  => $is
     ]);
 $res = $stmt->fetchAll();
-var_dump($res);
+// var_dump($res);
 echo $res[0]['DriverWin'];
 echo $res[0]['FastestP'];
 echo $res[0]['FirstR'];
