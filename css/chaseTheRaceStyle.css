@@ -24,6 +24,10 @@ body {
  color:#fff !important;
 }
 
+button, input, select, textarea{
+  color: black !important;
+}
+
 .content{
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
   margin-top: 10px;
