@@ -12,7 +12,7 @@ body {
   outline: none;
   width: 100%;
   height: auto;
-  color: #fff;
+  
   background: linear-gradient(90deg, #000000 5%, #2C666E);
   position: static;
   border-bottom: 4px solid #D63E80;
@@ -61,6 +61,8 @@ input[type=number]{
   width: 40px;
 
 }
+
+
 
 input[type=checkbox] {
 
