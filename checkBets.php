@@ -17,16 +17,16 @@ where users.id = :userid");
 $user = unserialize (serialize ($_SESSION['user']));
 //$user = (user) $user;
 // var_dump($user);
-var_dump($user->id);
-
+//var_dump();
+$is = (int) $user->id;
 // echo $user->id;
 // var_dump($db);
 
-// $r = $stmt->execute([
-//     'userid'  => $user->id
-//     ]);
+$r = $stmt->execute([
+    'userid'  => $is
+    ]);
 
-// $thing = $r->fetchAll(PDO::FETCH_COLUMN, 0);
+$thing = $r->fetchAll();
 
 print_r($thing);
 }
