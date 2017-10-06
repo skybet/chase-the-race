@@ -14,14 +14,14 @@ inner join drivers on predictions.prediction = drivers.id
 where users.id = :userid");
 
 $user = unserialize (serialize ($_SESSION['user']));
-
 $user->email;
 
 $r = $stmt->execute([
-    'userid'  => $user->id
-]);
+    'userid'  => $user->id]);
+
 $thing = $r->fetchAll();
-var_dump($thing);
+
+print_r($thing);
 }
 DrawDriver();
 ?>
