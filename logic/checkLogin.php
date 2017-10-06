@@ -15,7 +15,7 @@ $r->execute(['email' => $_POST['email']]);
 // var_dump($r->fetchAll());
 $failed = $r->fetchAll();
 var_dump($r);
-if (count($failed) >= 1){
+if (isset($r)){
 foreach ($r as $userInfo) {
   $userFactory = new UserManager($db);
   $thisUser = $userFactory->byEmail($userInfo['email']);
@@ -28,7 +28,7 @@ foreach ($r as $userInfo) {
   }
 }
 }
-// else {
-//   header('Location: ../index.php?failed');
-// }
+else {
+  header('Location: ../index.php?failed');
+}
 ?>
