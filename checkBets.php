@@ -18,7 +18,7 @@
     </head>
 
 <?php
-include_once(__DIR__.'/../Includes/navBar.inc.php');
+include_once(__DIR__.'/Includes/navBar.inc.php');
       
 include 'logic/db.php';
 include 'logic/sessions.php'; 
