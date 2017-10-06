@@ -18,7 +18,6 @@
       gtag('config', 'UA-107454217-1');
     </script>
 
-
   </head>
 
   <body>
