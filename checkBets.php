@@ -6,9 +6,20 @@
     <link rel="stylesheet" type="text/css" href="../css/chaseTheRaceStyle.css"/>
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <!-- Global Site Tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107454217-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+
+      gtag('config', 'UA-107454217-1');
+    </script>
     </head>
 
 <?php
+include_once(__DIR__.'/../Includes/navBar.inc.php');
+      
 include 'logic/db.php';
 include 'logic/sessions.php'; 
 include 'classes/drivers.php';
