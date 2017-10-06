@@ -50,11 +50,11 @@ $res = $stmt->fetchAll();
 
 echo "<table>";
 echo     "<tr>";
-echo         "<td>"$res[0]['DriverWin']"</td>";
-echo         "<td>"$res[0]['FastestP']"</td>";
-echo         "<td>"$res[0]['FirstR']"</td>";
-echo         "<td>"$res[0]['safety_car']"</td>";
-echo         "<td>"$res[0]['tiebreaker']"</td>";
+echo         "<td>" . $res[0]['DriverWin'] ."</td>";
+echo         "<td>" . $res[0]['FastestP'] . "</td>";
+echo         "<td>" . $res[0]['FirstR'] . "</td>";
+echo         "<td>" . $res[0]['safety_car'] . "</td>";
+echo         "<td>" . $res[0]['tiebreaker'] . "</td>";
 echo     "</tr>";
 echo "</table>";
 
