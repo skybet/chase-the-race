@@ -2,6 +2,7 @@
 include 'logic/db.php';
 include 'logic/sessions.php'; 
 include 'classes/drivers.php';
+include 'classes/user.php';
 
 function DrawDriver(){
     $db = getDB();
@@ -14,7 +15,7 @@ inner join drivers on predictions.prediction = drivers.id
 where users.id = :userid");
 
 $user = unserialize (serialize ($_SESSION['user']));
-$user->email;
+//$user = (user) $user;
 var_dump($user);
 // var_dump($user['id']);
 
