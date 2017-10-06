@@ -37,6 +37,11 @@ $domain = $explode[1];
 $dateAndTime = date('Y-m-d H:i:s');
 
 $usermanager = new UserManager($pdo);
+
+$exists = $usermanager->doesEmailExist($_POST['email']);
+
+if (!$exists) {
+
 $usermanager->insertUser($_POST['email'], $ipAddress, $domain, $dateAndTime, $password);
 
 $user = $usermanager->byEmail($_POST['email']);
@@ -45,5 +50,16 @@ $_SESSION['user'] = $user;
 $_SESSION['login'] = 1;
 
 header('Location: ../index.php');
+}
+
+else
+{
+  echo "<script>
+    alert(\"Your Email address is already in use. Please try again\");
+    window.history.back();
+  </script>";
+
+}
+
 
 ?>

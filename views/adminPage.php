@@ -18,7 +18,6 @@
       gtag('config', 'UA-107454217-1');
     </script>
 
-
   </head>
 
   <body>
@@ -87,11 +86,20 @@
             <option value="13">Felipe Massa</option>
             <option value="14">Jolyon Palmer</option>
             <option value="15">Lance Stroll</option>
+<<<<<<< HEAD
             <option value="16">Pierre Gastly</option>
             <option value="17">Romain Grosjean</option>
             <option value="18">Kevin Magnussen</option>
             <option value="19">Marcus Ericsson</option>
             <option value="20">Pascal Wehrlein</option>
+=======
+            <option value="15">Pierre Gastly</option>
+            <option value="16">Romain Grosjean</option>
+            <option value="17">Kevin Magnussen</option>
+            <option value="18">Marcus Ericsson</option>
+            <option value="19">Pascal Wehrlein</option>
+            <option value="20">No retiree</option>
+>>>>>>> 711eca839843106155fad9dde3b27dc8630dfe3c
           </select>
           <br>
 

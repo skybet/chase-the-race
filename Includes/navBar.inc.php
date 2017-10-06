@@ -1,12 +1,17 @@
 <div id="navHeader">
-  <div class="container">
+  <div class="container-header">
     <div style="display: inline-block;"  id="logoDiv">
+<<<<<<< HEAD
+=======
+    <a href="../index.php">
+>>>>>>> 711eca839843106155fad9dde3b27dc8630dfe3c
       <img src="/Images/logo.png" alt="logo">
+    </a>
     </div>
     <?php if(isset($_SESSION['login'])){ ?>
       <a style="color: white; display: inline-block; float: right;" href="../logic/logout.php">Logout</a>
     <?php } else { ?>
-      <form class="loginForm" style="display: inline-block; float: right; margin-top: 20px;" action="../logic/checkLogin.php" method="post">
+      <form class="loginForm" style="display: inline-block; float: right; margin-top: 10px;" action="../logic/checkLogin.php" method="post">
         <div style="display: inline-block;">
           <label>Email</label><br/>
           <input type="text" name="email"><br/>
