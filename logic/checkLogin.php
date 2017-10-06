@@ -15,7 +15,7 @@ $r->execute(['email' => $_POST['email']]);
 // var_dump($r->fetchAll());
 // $failed = $r->fetchAll();
 // var_dump($r);
-if (isset($r)){
+if (!$r){
 foreach ($r as $userInfo) {
   $userFactory = new UserManager($db);
   $thisUser = $userFactory->byEmail($userInfo['email']);
