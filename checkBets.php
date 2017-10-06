@@ -21,14 +21,14 @@ $user = unserialize (serialize ($_SESSION['user']));
 $is = (int) $user->id;
 // echo $user->id;
 // var_dump($db);
-
+echo $is;
 $r = $stmt->execute([
     'userid'  => $is
     ]);
 
-$thing = $r->fetchAll();
-
-print_r($thing);
+// $thing = $r->fetchAll();
+var_dump($r);
+// print_r($thing);
 }
 DrawDriver();
 ?>
