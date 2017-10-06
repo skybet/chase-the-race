@@ -35,7 +35,8 @@
     <div class="jumbotron">
       <div class="container text-center">
         <h1 class="pageTitle">Chase the Race</h1>
-        <br> <h3>Japanese Grand Prix - 8th October 2017</h3>
+        <br> <h3>Japanese Grand Prix - 8th October 2017</h3> <br>
+            <h4>Place Five Predictions - Win £100,000<h4>
       </div>
     </div>
 
