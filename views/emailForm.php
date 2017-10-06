@@ -41,7 +41,7 @@
 
     <div class="container">
 
-      <form class="predictionForm" action="../createBet.php" method="post" onsubmit="return checkForm()>
+      <form class="predictionForm" action="../createBet.php" method="post" onsubmit="return checkForm()">
         <div class="row">
 
           <div class="col-sm-5 content">
