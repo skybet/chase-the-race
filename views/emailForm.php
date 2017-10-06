@@ -47,7 +47,7 @@
           <div class="col-sm-5 content">
             <div class="card">
               <h5> Race Winner </h5> <br>
-              <select class="form-control" name="winner" id="">
+              <select class="form-control" name="winner" id="winner">
               <option value="1">Lewis Hamilton</option>
               <option value="2">Sebastian Vettel</option>
               <option value="3">Max Verstappen</option>

@@ -1,4 +1,5 @@
 function checkForm(){
+  alert("sfgsf");
     var tieBreak;
     var email;
     var winner;
