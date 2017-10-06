@@ -32,7 +32,7 @@ body {
   border-width: 1px;
   background-color:rgba(182,203,212,0.8);
   border-color: rgba(212, 66, 128, 0.4)
-  
+
 }
 
 .container-header {
@@ -46,10 +46,10 @@ body {
   width: auto;
 }
 
-select{ 
+select{
 margin: 20px;
-width: 20%; 
-text-align-last: center; 
+width: 20%;
+text-align-last: center;
 }
 
 input[type=number]{
@@ -66,9 +66,9 @@ input[type=checkbox] {
   text-align: center;
   margin-left: 7%;
   margin-right: 7%;
-  
+
 }
-  
+
 
 .bottomBets{
   margin-left: 25%;
@@ -97,7 +97,7 @@ img {
 
 .cardB {
   padding: 24px;
- 
+
  }
 
 .loginForm{
@@ -136,22 +136,9 @@ input {
   height: 60px;
 }
 
-@media(max-width: 900px){
-
-  #footerbottom {
-    position: relative !important;
-    display: block;
-    padding: 1rem;
-    font-size: 7px;
-  }
-
-}
-
 #footerbottom {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  position: relative !important;
+  display: block;
   padding: 1rem;
   font-size: 7px;
 }
