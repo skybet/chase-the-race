@@ -19,9 +19,9 @@ foreach ($r as $userInfo) {
   if($_POST['email'] == $userInfo['email'] && $thisUser->passwordValid($_POST['password'])){
     $_SESSION['login'] = 1;
     $_SESSION['user'] = $thisUser;
-    header('Location: ../index.php');
+    header('Location: ../index.php');        
   } else {
-    echo "Wrong username or password";
+    header('Location: ../index.php?failed');        
   }
 }
 

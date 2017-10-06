@@ -1,0 +1,201 @@
+
+<!-- saved from url=(0022)http://localhost:8082/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Chase the Race</title>
+  <link rel="stylesheet" type="text/css" href="./Chase the Race_files/chaseTheRaceStyle.css">
+  <link rel="icon" href="http://localhost:8082/Images/favicon.ico" type="image/x-icon">
+  <script type="text/javascript" async="" src="./Chase the Race_files/analytics.js"></script><script src="./Chase the Race_files/jquery.min.js"></script>
+  <script src="./Chase the Race_files/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./Chase the Race_files/bootstrap.min.css">
+  <script src="./Chase the Race_files/formValidation.js"></script>
+
+  <!-- Global Site Tag (gtag.js) - Google Analytics -->
+  <script async="" src="./Chase the Race_files/js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments)
+    };
+    gtag('js', new Date());
+    gtag('config', 'UA-107454217-1');
+  </script>
+
+</head>
+
+<body>
+  <div id="navHeader">
+  <div class="container">
+    <div id="logoDiv">
+      <img src="./Chase the Race_files/logo.png" alt="logo">
+    </div>
+  </div>
+</div>
+    
+    
+
+      <div class="jumbotron">
+        <div class="container text-center">
+          <h1 class="pageTitle">Chase the Race</h1>
+          <h2>Place Your Bets!</h2>
+        </div>
+      </div>
+
+  
+
+
+    <div class="container">
+
+    <form class="predictionForm" action="http://localhost:8082/createBet.php" method="post">
+      <div class="row">
+
+     
+      <div class="col-sm-6 col-md-4 col-lg-2">
+      <div class="card">
+              Race Winner <br>
+              <select class="form-control" name="winner" id="">
+              <option value="1">Lewis Hamilton</option>
+              <option value="2">Sebastian Vettel</option>
+              <option value="3">Max Verstappen</option>
+              <option value="4">Daniel Ricciardo</option>
+              <option value="5">Kimi Rakikkonen</option>
+              <option value="6">Valtteri Bottas</option>
+              <option value="7">Sergio Perez</option>
+              <option value="8">Esteban Ocon</option>
+              <option value="9">Fernando Alonso</option>
+              <option value="10">Nico Hulkenburg</option>
+              <option value="11">Stoffel Vandoorne</option>
+              <option value="12">Carlos Sainz</option>
+              <option value="13">Felope Massa</option>
+              <option value="14">Jolyon Palmer</option>
+              <option value="15">Lance Stroll</option>
+              <option value="15">Pierre Gastly</option>
+              <option value="16">Romain Grosjean</option>
+              <option value="17">Kevin Magnussen</option>
+              <option value="18">Marcus Ericsson</option>
+              <option value="19">Pascal Wehrlein</option>
+            </select>
+      </div>
+  </div>
+
+ 
+      <div class="col-sm-6 col-md-4 col-lg-2">
+      <div class="card">
+          Fastest Pit Time <br>
+          <select class="form-control" name="fastestPitStop" id="fastestPitStop">
+            <option value="1">Ferrari</option>
+            <option value="2">Force India</option>
+            <option value="3">Hass</option>
+            <option value="4">McLaren</option>
+            <option value="5">Mercedes</option>
+            <option value="6">Redbull</option>
+            <option value="7">Renault</option>
+            <option value="8">Sauber</option>
+            <option value="9">Toro Rosso</option>
+            <option value="10">Williams</option>
+          </select>
+  </div>
+  </div>
+
+ 
+  <div class="col-sm-6 col-md-4 col-lg-2">
+  <div class="card">
+          First Retiree <br>
+            <select class="form-control" name="retiree" id="retiree">
+              <option value="1">Lewis Hamilton</option>
+              <option value="2">Sebastian Vettel</option>
+              <option value="3">Max Verstappen</option>
+              <option value="4">Daniel Ricciardo</option>
+              <option value="5">Kimi Rakikkonen</option>
+              <option value="6">Valtteri Bottas</option>
+              <option value="7">Sergio Perez</option>
+              <option value="8">Esteban Ocon</option>
+              <option value="9">Fernando Alonso</option>
+              <option value="10">Nico Hulkenburg</option>
+              <option value="11">Stoffel Vandoorne</option>
+              <option value="12">Carlos Sainz</option>
+              <option value="13">Felope Massa</option>
+              <option value="14">Jolyon Palmer</option>
+              <option value="15">Lance Stroll</option>
+              <option value="15">Pierre Gastly</option>
+              <option value="16">Romain Grosjean</option>
+              <option value="17">Kevin Magnussen</option>
+              <option value="18">Marcus Ericsson</option>
+              <option value="19">Pascal Wehrlein</option>
+            </select>
+  </div>
+    </div>
+
+   
+    <div class="col-sm-6 col-md-4 col-lg-2">
+    <div class="card">
+              Will a safety car be used? <br>
+              <input type="checkbox" name="safetyCar">
+      </div>
+  </div>
+
+  <div class="card">
+      <div class="col-sm-6 col-md-4 col-lg-2">
+        <div class="example">
+              Tiebreaker - Number Of Pitstops <br>
+              <input name="tiebreaker" id="tiebreaker" type="number" min="0" step="1" size="3" required="">
+        </div>
+      </div>
+  </div>
+ 
+
+  </div>
+
+    
+      <div class="enterCard">
+
+      
+              <input class="btn btn-primary" type="submit" name="submit" value="Enter" onclick="return checkForm()">
+      
+  
+
+  </div></form>
+      <p id="result"></p>
+      </div>
+      <script type="scripts/placeBet.js"></script>
+      <footer>
+           <div id="footerBottom">
+               <div class="w-50p disp-in fl-left fs-11">
+                   © 2017 Hestview Ltd. All Rights Reserved.
+               </div>
+               <div class="w-50p disp-in fl-right txt-right fs-11">
+                   <span>Terms and Conditions</span>
+                   <p>Race winner-
+
+                   Bets will be settled on the official podium result immediately following the race.
+                   FIA classifications will constitute the official result.
+                   Subsequent amendments after the podium presentation will not count for betting purposes.
+
+                   Driver of Fastest Lap-
+
+                   This market shall be settled on the driver who sets the fastest single lap of the race.
+                   Drivers who set their fastest lap on their final lap following the leader winning the race will still be eligible to win this market with their fastest lap.
+
+                   Safety Car come on?
+
+                   Bets will be settled on whether or not the Safety Car is used in the race. The Safety Car will be deemed to have been used if Race Control signal for the car to join the track.
+                   Bets on the safety car will only be settled if a physical safety car enters the track at any point during the race. Virtual safety car will not count and bets will not be settled as “Yes” based solely upon this.
+                   Should the race start under Safety Car conditions, bets on this market will be made void.
+
+                   First Retiree-
+
+                   Bets will be settled on the first driver to retire a car from the race.
+                   Should more than one car retire on the same lap, dead-heat rules apply.
+                   Only cars who are lined up on the grid when the lights go out to signal the start of the race will be deemed to be starters, and eligable to be a "First Driver to Retire" - cars who fail to complete the warm-up lap, or whom do not reach the starting grid will be made void.
+
+                 </p>
+               </div>
+           </div>
+       
+
+   </footer>
+
+<script src="./Chase the Race_files/jquery.min.js"></script>
+
+</body></html>
