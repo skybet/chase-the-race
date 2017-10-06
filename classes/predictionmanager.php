@@ -33,7 +33,7 @@ class PredictionManager {
     }
 
     $stmt = $this->db->prepare("
-      SELECT users.email, predictions.tiebreaker 
+      SELECT users.email, users.domain, users.ip, predictions.tiebreaker 
       FROM Users 
       INNER JOIN Predictions
       ON users.id = predictions.user_id 
@@ -52,6 +52,28 @@ class PredictionManager {
     $results = $stmt->fetchAll();
     
     return $results;
+  }
+
+  public function getIPCount($ip){
+    $stmt = $this->db->prepare("
+      SELECT COUNT(ip) FROM Users WHERE ip = :ip");
+  
+    $stmt->execute(['ip' => $ip]);
+    
+    $ipCount = $stmt->fetch();
+
+    return $ipCount;
+  }
+
+  public function getDomainCount($domain){
+    $stmt = $this->db->prepare("
+      SELECT COUNT(domain) FROM Users WHERE domain = :domain");
+  
+    $stmt->execute(['domain' => $domain]);
+    
+    $domainCount = $stmt->fetch();
+
+    return $domainCount;
   }
 }
 ?>

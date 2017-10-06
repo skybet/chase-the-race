@@ -6,18 +6,23 @@ class UserManager {
     $this->db = $db;
   }
 
-  public function insertUser($email) {
+  public function insertUser($email, $ip, $domain, $date, $password) {
     $stmt = $this->db->prepare("
-      insert into Users (email)
-      values (:email)");
+      insert into Users (email, domain, date_created, ip, password)
+      values (:email, :domain, :date_created, :ip, :password)");
 
     $r = $stmt->execute([
-      'email' => $email
+      'email' => $email,
+      'ip' => $ip,
+      'domain' => $domain,
+      'date_created' => $date,
+      'password' => $password
     ]);
   }
+
   public function byEmail($email) {
     $r = $this->db->prepare(
-      "select id, email, domain, date_created, ip
+      "select id, email, domain, date_created, ip, password
       from Users
       where email = :email");
     $r->execute(['email' => $email]);

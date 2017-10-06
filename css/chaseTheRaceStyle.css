@@ -35,6 +35,12 @@ body {
   
 }
 
+.container-header {
+  text-align: left;
+  margin-left: 7%;
+  margin-right: 7%;
+}
+
 #logoDiv img {
   height: 90px;
   width: auto;
@@ -94,9 +100,20 @@ img {
  
  }
 
+.loginForm{
+  color: white;
+}
 
+label{
+  color: white;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  font-weight: normal;
+}
 
-
+a{
+  color: white;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
 .submitButton {
   width: 100px;
   height: 40px;
@@ -137,4 +154,11 @@ input {
   left: 0;
   padding: 1rem;
   font-size: 7px;
+}
+
+@media(max-width: 700px){
+  .loginForm {
+    float: none !important;
+    color: white;
+  }
 }

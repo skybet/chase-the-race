@@ -4,55 +4,37 @@ include 'classes/predictionmanager.php';
 include 'classes/user.php';
 include 'classes/prediction.php';
 include 'logic/db.php';
+include 'logic/sessions.php';
 
-function get_client_ip_server() {
-  $ipaddress = '';
-  if ($_SERVER['HTTP_CLIENT_IP'])
-      $ipaddress = $_SERVER['HTTP_CLIENT_IP'];
-  else if($_SERVER['HTTP_X_FORWARDED_FOR'])
-      $ipaddress = $_SERVER['HTTP_X_FORWARDED_FOR'];
-  else if($_SERVER['HTTP_X_FORWARDED'])
-      $ipaddress = $_SERVER['HTTP_X_FORWARDED'];
-  else if($_SERVER['HTTP_FORWARDED_FOR'])
-      $ipaddress = $_SERVER['HTTP_FORWARDED_FOR'];
-  else if($_SERVER['HTTP_FORWARDED'])
-      $ipaddress = $_SERVER['HTTP_FORWARDED'];
-  else if($_SERVER['REMOTE_ADDR'])
-      $ipaddress = $_SERVER['REMOTE_ADDR'];
-  else
-      $ipaddress = 'UNKNOWN';
+if ($_SESSION['login'])
+{
+$user = unserialize (serialize ($_SESSION['user']));
 
-  return $ipaddress;
-}
+$predictionmanager = new PredictionManager(getDB());
 
-$ipAddress = get_client_ip_server();
+$predictionmanager->save($user->id, $_POST);
 
-// $mail = new PHPMailer;
+$user = unserialize (serialize ($_SESSION['user']));
 
-// $mail->isSMTP();  // Set mailer to use SMTP
-// $mail->Host = 'smtp.mailgun.org';  // Specify mailgun SMTP servers
-// $mail->SMTPAuth = true; // Enable SMTP authentication
-// $mail->Username = 'postmaster@chase-the-race.mailgun.org'; // SMTP username from https://mailgun.com/cp/domains
-// $mail->Password = 'a3daec95b1a90384c97acd336599f8b3'; // SMTP password from https://mailgun.com/cp/domains
-// $mail->SMTPSecure = 'tls';   // Enable encryption, 'ssl'
+require 'vendor/autoload.php';
 
-// $mail->From = 'excited@chase-the-race.mailgun.org'; // The FROM field, the address sending the email
-// $mail->FromName = 'Orlie'; // The NAME field which will be displayed on arrival by the email client
-// $mail->addAddress($_POST['email'], 'BOB');     // Recipient's email address and optionally a name to identify him
-// $mail->isHTML(true);   // Set email to be sent as HTML, if you are planning on sending plain text email just set it to false
-
-// // The following is self explanatory
-// $mail->Subject = 'Email sent with Mailgun';
-// $mail->Body    = '<span style="color: red">Mailgun rocks</span>, thank you <em>phpmailer</em> for making emailing easy using this <b>tool!</b>';
-// $mail->AltBody = 'Mailgun rocks, shame you can\'t see the html sent with phpmailer so you\'re seeing this instead';
-
-// if(!$mail->send()) {
-//     echo "Message hasn't been sent.";
-//     echo 'Mailer Error: ' . $mail->ErrorInfo . "\n";
-// } else {
-//     echo "Message has been sent :) \n";
-
-// }
+$from = new SendGrid\Email("ChaseTheRace", "entries@chasetherace.com");
+$subject = "Your entry has been recorded!";
+$to = new SendGrid\Email($user->email, $user->email);
+$content = new SendGrid\Content("text/html", " ");
+$mail = new SendGrid\Mail($from, $subject, $to, $content);
+$mail->setTemplateId("a80512c6-9215-4cf4-9378-7e3ddd2f9e02");
+$mail->personalization[0]->addSubstitution("[%email%]", $user->email);
+$apiKey = getenv('SENDGRID_API_KEY');
+$sg = new \SendGrid($apiKey);
+$response = $sg->client->mail()->send()->post($mail);
+echo $response->statusCode();
+print_r($response->headers());
+echo $response->body();
 
 header('Location: confirmation.php');
+}else {
+header('Location: index.php?notLoggedIn');
+} 
+
 ?>
